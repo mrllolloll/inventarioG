@@ -3,12 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+      <aside class="col-md-2">
+          @include('TableC.lateralbart')
+      </aside>
+        <div class="col-md-10">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
+                <div class="panel-heading">Tabla de Administracion</div>
                 <div class="panel-body">
-                    You are logged in!
+                    @include('TableC.tablecentral')
                 </div>
             </div>
         </div>
