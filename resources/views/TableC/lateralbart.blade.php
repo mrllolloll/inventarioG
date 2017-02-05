@@ -1,3 +1,4 @@
+<?php $campo1=''; ?>
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -73,7 +74,7 @@
           </tr>
           <tr>
             <td>
-              Tex
+              <p>Tex</p>
             </td>
           </tr>
         </table>
@@ -81,4 +82,10 @@
     </div>
   </div>
 </div>
+<script>
+$(".yolo").click(function(){
+  alert("Hello World!");
+});
+</script>
 @include('formularios.agrecamptable')
+@include('formularios.agragrdat')

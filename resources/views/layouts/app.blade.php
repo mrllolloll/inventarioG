@@ -19,6 +19,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <script src="/js/app.js"></script>
 </head>
 <body>
     <div id="app">
