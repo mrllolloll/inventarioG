@@ -10,9 +10,22 @@
     </section>
   </section>
   <section class="form-group">
+    <script type="text/javascript">
+    $("#ocult").hide(300);
+    $("#selecto").click(function(){
+      var combo = document.getElementById("selecto");
+      var selected = combo.options[combo.selectedIndex].text;
+      if (selected!="Fechas") {
+        $("#ocult").hide(300);
+        $('#cbox0').prop('checked', false);
+      }else {
+        $("#ocult").show(300);
+      }
+    });
+    </script>
     <label for="proyectid" class="col-md-4">Tipo de modulo:</label>
     <section class="col-md-8">
-      <select class="select" name="objet">
+      <select id="selecto" class="select" name="objet">
         <option value="">Seleccione una opción.</option>
         <option value="Fecth">Fechas</option>
         <option value="text">Texto</option>
@@ -21,9 +34,9 @@
       </select>
     </section>
   </section>
-  <section class="form-group">
+  <section class="form-group" id="ocult">
     <section class="col-md-8">
-        <input type="checkbox" id="cbox0" value="Fechaingre"> <label for="cbox0">Fecha automatica.</label>
+        <input type="checkbox" id="cbox0" name="Fechaauto" value="true"> <label for="cbox0">Fecha automatica por registro.</label>
     </section>
   </section>
   <section class="form-group">

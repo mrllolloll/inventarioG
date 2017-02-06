@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/home1', function () {
+    return view('home');
+});
 
+Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('/tablerecurses','tablerecurses');
+Route::resource('/camp','agrcampos');

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class TableCentral extends Model
 {
@@ -12,7 +13,7 @@ class TableCentral extends Model
    * @var array
    */
   protected $fillable = [
-      'user_id','registimeP',
+      'id','user_id','registimeP',
   ];
 
 }
