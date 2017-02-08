@@ -35,10 +35,33 @@ class agrcampos extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    private function CasoAelet1($value)
+     {
+       $mofi1=$value;
+       $sustitu = array(0=>"_");
+       $indicador = array(0=>"/ /");
+       return preg_replace($indicador,$sustitu,$mofi1);
+     }
+
     public function store(Request $request)
     {
+      $yolito="";
+      $fatamano="";
       $titutable=camptable::all();
-      $results=DB::statement('Alter table table_centrals add '.$titulo);
+      $i1=0;
+      foreach ($titutable as $o) {
+        $i[$i1]=$o->nomtable;
+        if ($o->nombclum!="false") {
+          $fatamano.=",".$this->CasoAelet1($i[$i1]);
+          $yolito.=",'".$request->$i1."'";
+        }
+        $i1++;
+      }
+      $insertado = DB::insert('insert into table_centrals (user_id'.$fatamano.') values (1'.$yolito.')');
+      $i1=0;
+      return redirect('/home');
+
     }
 
     /**

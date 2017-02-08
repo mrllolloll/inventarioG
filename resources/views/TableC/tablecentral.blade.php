@@ -43,7 +43,6 @@ $.extend($.expr[":"],
           <label for="kwd_search">Buscar: </label><input type="text" id="kwd_search" value=""/>
         </th>
       </tr>
-
       <tr>
         <th>Identificador</th>
         @foreach($titutable as $n)

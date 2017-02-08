@@ -10,19 +10,6 @@
     </section>
   </section>
   <section class="form-group">
-    <script type="text/javascript">
-    $("#ocult").hide(300);
-    $("#selecto").click(function(){
-      var combo = document.getElementById("selecto");
-      var selected = combo.options[combo.selectedIndex].text;
-      if (selected!="Fechas") {
-        $("#ocult").hide(300);
-        $('#cbox0').prop('checked', false);
-      }else {
-        $("#ocult").show(300);
-      }
-    });
-    </script>
     <label for="proyectid" class="col-md-4">Tipo de modulo:</label>
     <section class="col-md-8">
       <select id="selecto" class="select" name="objet">
@@ -47,4 +34,17 @@
     </section>
   </section>
 </form>
+<script type="text/javascript">
+$("#ocult").hide(0);
+$("#selecto").click(function(){
+  var combo = document.getElementById("selecto");
+  var selected = combo.options[combo.selectedIndex].text;
+  if (selected!="Fechas") {
+    $("#ocult").hide(300);
+    $('#cbox0').prop('checked', false);
+  }else {
+    $("#ocult").show(300);
+  }
+});
+</script>
 @endsection

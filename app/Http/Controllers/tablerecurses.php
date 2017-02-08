@@ -35,12 +35,16 @@ class tablerecurses extends Controller
   * @param  \Illuminate\Http\Request  $request
   * @return \Illuminate\Http\Response
   */
-  private function CasoSelet($value)
+  private function CasoSelet($value,$value1)
   {
     switch ($value) {
       case 'Fecth':
 
-        return "TIMESTAMP";
+          if ($value1 =="true") {
+            return "TIMESTAMP DEFAULT CURRENT_TIMESTAMP";
+          }else {
+            return "DATE";
+          }
 
       break;
       case 'text':
@@ -53,40 +57,58 @@ class tablerecurses extends Controller
         return "int";
 
       break;
-      case 'Dualt':
+    }
+  }
 
-        return "";
+  private function yolo($value,$value1)
+  {
+    switch ($value) {
+      case 'Fecth':
+
+          if ($value1 =="true") {
+            return "false";
+          }else {
+            return "DATE";
+          }
+
+      break;
+      case 'text':
+
+        return "text";
+
+      break;
+      case 'number':
+
+        return "number";
 
       break;
     }
   }
+
 
   public function store(Request $request)
   {
     //
     $this->validate($request,[
       'nommodul'=>'required',
+      'nommodul'=>'unique:camptables,nomtable',
+      'nommodul'=>'max:18',
       'objet'=>'required',
     ]);
-    $descrip=$this->CasoSelet($request->objet);
+    $descrip=$this->CasoSelet($request->objet,$request->Fechaauto);
     $mofi1=$request->nommodul;
     $indicador = array(0=>"/ /");
     $sustitu = array(0=>"_");
     $mofi=preg_replace($indicador,$sustitu,$mofi1);
-
-    if ($request->Fechaauto=="true") {
-      $modifi=" DEFAULT CURRENT_TIMESTAMP";
-    }else {
-      $modifi="";
-    }
-    $titulo= $mofi." ".$descrip.$modifi;
-    $results=DB::statement('Alter table table_centrals add '.$titulo);
-
+    $sinta=$mofi." ".$descrip;
+    $results=DB::statement('Alter table table_centrals add '.$sinta);
+    $descript=$this->yolo($request->objet,$request->Fechaauto);
     $nomert=new camptable;
     $nomert->nomtable=$request->nommodul;
+    $nomert->nombclum=$descript;
     $nomert->save();
 
-    return view('/home');
+    return redirect('/home');
 
   }
 

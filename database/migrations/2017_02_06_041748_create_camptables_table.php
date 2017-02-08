@@ -16,6 +16,7 @@ class CreateCamptablesTable extends Migration
         Schema::create('camptables', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nomtable');
+            $table->string('nombclum');
             $table->timestamps();
         });
     }

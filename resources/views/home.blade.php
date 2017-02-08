@@ -10,8 +10,8 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading">Tabla de Administracion
-                  <button type="button" class="btn btn-default btn-xs pull-right" data-toggle="modal" data-target="">
-                    +
+                  <button type="button" class="btn btn-default btn-xs pull-right" data-toggle="modal" data-target="#agreinfo">
+                    Agregar Informacion.
                   </button>
                 </div>
 
