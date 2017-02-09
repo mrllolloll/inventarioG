@@ -11,7 +11,8 @@ function CasoSelet11($value)
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-         <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#AgreCamp1">
+         
+        <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#AgreCamp1">
           Agregar Campos.
         </button>
       </h4>
@@ -41,7 +42,6 @@ function CasoSelet11($value)
   foreach ($titutable as $o) {
     $i[$i1]=$o->nomtable;
     $mostar=CasoSelet11($i[$i1]);
-    $kk=route('tablerecurses.destroy',["id"=>$o->id,"yolo"=>$mostar]);
     echo '  <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
@@ -53,13 +53,9 @@ function CasoSelet11($value)
         <div id="colas'.$i1.'" class="panel-collapse collapse">
           <div class="panel-body">
             <table>
-            <tr>
-                  <form action="'.$kk.'" method="POST">
-                  '.csrf_field().'
-                  <input type="hidden" name="_method" value="DELETE">
-                  <input type="submit" class="btn btn-danger btn-xs" value="Eliminar">
-             </form>
-            </tr>
+              <tr>
+                <td>Eliminar</td>
+              </tr>
             </table>
           </div>
         </div>
@@ -71,6 +67,10 @@ function CasoSelet11($value)
   $i1=0;
   ?>
 </div>
-
+<script>
+$("").click(function(){
+  alert("Hello World!");
+});
+</script>
 @include('formularios.agrecamptable')
 @include('formularios.agragrdat')

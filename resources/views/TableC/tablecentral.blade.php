@@ -35,7 +35,7 @@ $.extend($.expr[":"],
 </script>
 
 <section class="table-responsive">
-  <table id="my-table" class="table table-striped table-hover">
+  <table id="my-table" class="table table-striped table-hover table-condensed">
     @if(isset($titutable))
     <thead>
       <tr>
@@ -69,20 +69,10 @@ $.extend($.expr[":"],
           $i1++;
         }
         $i1=0;
-        $kk=route('camp.destroy',$lol->id);
-       echo"<td>
-        <td>
-       <a href='/camp/".$lol->id."/edit' class='btn btn-primary btn-xs'>Editar</a>
-            </td>
-             <td>
-             <form  action='".$kk."' method='POST'>
-             ".csrf_field()."
-             <input type='hidden' name='_method' value='DELETE'>
-             <input type='submit' class='btn btn-danger btn-xs' value='Borrar'>
-        </form>
-       </td>
-       </td>
-              ";
+       echo' <td>
+               <button type="button" name="button" class="btn btn-xs btn-primary">Editar</button>
+               <button type="button" name="button" class="btn btn-xs btn-danger">Borrar</button>
+             </td>';
         echo "</tr>";
       }
       ?>

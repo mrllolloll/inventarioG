@@ -72,6 +72,7 @@ class agrcampos extends Controller
      */
     public function show($id)
     {
+        //
     }
 
     /**
@@ -82,12 +83,7 @@ class agrcampos extends Controller
      */
     public function edit($id)
     {
-      $table=TableCentral::all();
-      $titutable=camptable::all();
-
-      $yolitoss=TableCentral::find($id);
-
-      return  view("/home")->with(['edit'=>true,"camper"=>$yolitoss])->with(['titutable' => $titutable])->with(["table"=>$table]);
+        //
     }
 
     /**
@@ -99,22 +95,7 @@ class agrcampos extends Controller
      */
     public function update(Request $request, $id)
     {
-      $yolito="";
-      $fatamano="";
-      $titutable=camptable::all();
-      $camsearch=TableCentral::find($id);
-      $i1=0;
-      $tolsl="";
-      $code="";
-      foreach ($titutable as $o) {
-        $i[$i1]=$o->nomtable;
-        $camsearch->$i[$i1]=$request->$i1;
-
-        $i1++;
-      }
-      $camsearch->save();
-
-      return redirect('/home');
+        //
     }
 
     /**
@@ -125,7 +106,6 @@ class agrcampos extends Controller
      */
     public function destroy($id)
     {
-      TableCentral::destroy($id);
-      return back();
+        //
     }
 }

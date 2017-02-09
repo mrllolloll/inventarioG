@@ -154,8 +154,6 @@ class tablerecurses extends Controller
   */
   public function destroy($id)
   {
-    camptable::destroy($id);
-    $results=DB::statement('alter table table_centrals drop column '.$_GET['yolo']);
-    return back();
+    //
   }
 }

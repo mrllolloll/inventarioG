@@ -1,7 +1,6 @@
 @extends('TableC.modalagracamp1', ['imodal'=>"agreinfo"])
 @section('titlmodal','Desea agregar informacion?')
 @section('contentmodl')
-
 <?php
 function CasoSelet1($value)
 {
@@ -30,19 +29,7 @@ function CasoSeletr($value)
       $fatamanor=CasoSeletr($i[$i1]);
       $dates=$o->nombclum;
       if ($dates!="false") {
-          if ($dates=="DATE") {
-            echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">
-            <input required type="text" id="id'.$fatamano.'"   name="'.$i1.'" class="form-control">
-            </section></section>
-            <script type="text/javascript">
-            $(document).ready(function() {
-            $("#id'.$fatamano.'").datepicker({dateFormat:"yy-mm-dd"});
-            });
-            </script>
-            ';
-          }else {
-            echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control" required></section></section>';
-          }
+        echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control"></section></section>';
       }
       $i1++;
     }

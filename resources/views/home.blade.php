@@ -5,9 +5,7 @@
 <div class="container">
     <div class="row">
       <aside class="col-md-2">
-        @if(!isset($edit))
           @include('TableC.lateralbart')
-        @endif
       </aside>
         <div class="col-md-10">
             <div class="panel panel-default">
@@ -18,11 +16,7 @@
                 </div>
 
                 <div class="panel-body">
-                    @if(isset($edit))
-                    @include('formularios.edit')
-                    @else
                     @include('TableC.tablecentral')
-                    @endif
                 </div>
             </div>
         </div>

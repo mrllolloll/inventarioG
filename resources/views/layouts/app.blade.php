@@ -80,10 +80,6 @@
         <script src="/js/app.js"></script>
         @yield('content')
     </div>
-    <script type="text/javascript">
-      alert('holaa');
-    </script>
-    @include('layouts.datespicker')
 
 </body>
 </html>
