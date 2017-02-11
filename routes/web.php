@@ -10,6 +10,13 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::get('/pdf', function () {
+  $table=App\TableCentral::all();
+  $titutable=App\camptable::all();
+  $pdf = PDF::loadView('pdfimp',['table'=>$table,'titutable'=>$titutable]);
+  $pdf->setPaper('A4', 'landscape');
+  return $pdf->download('pruebapdf.pdf');
+});
 
 Route::get('/', function () {
     return view('welcome');
