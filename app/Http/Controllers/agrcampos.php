@@ -84,9 +84,7 @@ class agrcampos extends Controller
     {
       $table=TableCentral::all();
       $titutable=camptable::all();
-
-      $yolitoss=TableCentral::find($id);
-
+      $yolitoss=TableCentral::where($_GET['defin'],'=',$_GET['valueS']);
       return  view("/home")->with(['edit'=>true,"camper"=>$yolitoss])->with(['titutable' => $titutable])->with(["table"=>$table]);
     }
 
@@ -108,7 +106,8 @@ class agrcampos extends Controller
       $code="";
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
-        $camsearch->$i[$i1]=$request->$i1;
+        $yolds=$this->CasoAelet1($i[$i1]);
+        $camsearch->$yolds=$request->$i1;
 
         $i1++;
       }

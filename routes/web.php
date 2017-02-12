@@ -11,7 +11,7 @@
 |
 */
 Route::get('/pdf', function () {
-  $table=App\TableCentral::all();
+  $table=App\TableCentral::where($_GET['ss'],'=',$_GET['ll'])->get();
   $titutable=App\camptable::all();
   $pdf = PDF::loadView('pdfimp',['table'=>$table,'titutable'=>$titutable]);
   $pdf->setPaper('A4', 'landscape');

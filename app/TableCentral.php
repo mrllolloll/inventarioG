@@ -13,7 +13,7 @@ class TableCentral extends Model
    * @var array
    */
   protected $fillable = [
-      'id','user_id','registimeP',
+      'id','registimeP',
   ];
 
 }

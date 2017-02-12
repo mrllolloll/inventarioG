@@ -58,15 +58,35 @@
     tr{
       border: 1px solid;
     }
+    th{
+      border: 1px solid;
+    }
     table{
       border: 1px solid;
+    }
+    header{
+      text-align: left;
+      margin-top: 10px;
+      padding-bottom: 15px;
+    }
+    header img{
+      display: inline-block;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    header h2{
+      display: inline-block;
+      margin-left: 210px;
+      margin-top: 30px;
     }
 
     </style>
 </head>
 <body>
   <header>
-    <h1></h1>
+    <img src="images/jk.png" width="150" height="100">
+    <h2>Direccion de informatica</h2>
   </header>
   <footer>
     <table>
