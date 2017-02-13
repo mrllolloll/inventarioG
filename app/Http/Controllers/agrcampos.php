@@ -84,7 +84,7 @@ class agrcampos extends Controller
     {
       $table=TableCentral::all();
       $titutable=camptable::all();
-      $yolitoss=TableCentral::where($_GET['defin'],'=',$_GET['valueS']);
+      $yolitoss=TableCentral::find($id);
       return  view("/home")->with(['edit'=>true,"camper"=>$yolitoss])->with(['titutable' => $titutable])->with(["table"=>$table]);
     }
 
