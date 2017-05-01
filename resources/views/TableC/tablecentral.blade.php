@@ -44,10 +44,10 @@ $.extend($.expr[":"],
         </th>
       </tr>
       <tr>
-        <th>Identificador</th>
         @foreach($titutable as $n)
         <th>{{$n->nomtable}}</th>
         @endforeach
+        <th>Opciones</th>
       </tr>
     </thead>
     <tbody>
@@ -55,14 +55,15 @@ $.extend($.expr[":"],
 
       <?php
       $i1=0;
+
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
         $i1++;
       }
+
       $i1=0;
       foreach ($table as $lol) {
         echo "<tr>";
-        echo "<td>".$lol->id."</td>";
         while ($i1 < count($i)) {
           $mostar=CasoSelet($i[$i1]);
           echo "<td>".$lol->$mostar."</td>";
@@ -70,19 +71,19 @@ $.extend($.expr[":"],
         }
         $i1=0;
         $kk=route('camp.destroy',$lol->id);
-       echo"<td>
-        <td>
-       <a href='/camp/".$lol->id."/edit' class='btn btn-primary btn-xs'>Editar</a>
-            </td>
-             <td>
-             <form  action='".$kk."' method='POST'>
-             ".csrf_field()."
-             <input type='hidden' name='_method' value='DELETE'>
-             <input type='submit' class='btn btn-danger btn-xs' value='Borrar'>
+
+       echo"
+       <td>
+       <form  action='".$kk."' method='POST'>
+          ".csrf_field()."
+        <div class='btn-group'>
+        <a href='/camp/".$lol->id."/edit' class='btn btn-primary btn-xs'>Editar</a>
+            <input type='hidden' name='_method' value='DELETE'>
+            <input type='submit' class='btn btn-danger btn-xs' value='Borrar'>
         </form>
+        </div>
        </td>
-       </td>
-              ";
+            ";
         echo "</tr>";
       }
       ?>

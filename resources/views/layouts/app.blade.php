@@ -35,8 +35,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/home') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('/home') }}" style=" padding-bottom: 40px;">
+                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" style="margin-top:-10px; height:60px; width:140px; "/>
                     </a>
                 </div>
 
