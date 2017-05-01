@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="Refresh" content="0;url={{url('/home')}}">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,6 +78,7 @@
   </style>
 </head>
 <body id="show">
+
   <script type="text/javascript" src="js/app.js"></script>
 
   <script type="text/javascript">
