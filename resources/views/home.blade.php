@@ -11,11 +11,11 @@
       </aside>
         <div class="col-md-10">
             <div class="panel panel-default">
-                <div class="panel-heading">Tabla de Administracion
-                  <button type="button" class="btn btn-primary btn-xs pull-right " data-toggle="modal" data-target="#Alo">
+                <div class="panel-heading" style="background-color: #c40909; color:white; font-size: 15px">Tabla de Administracion
+                  <button type="button" class="btn btn-primary btn-xs pull-right " data-toggle="modal" data-target="#Alo" style="color: white;">
                     PDF
                   </button>
-                  <button type="button" class="btn btn-default btn-xs pull-right" style="margin-right:10px;" data-toggle="modal" data-target="#agreinfo">
+                  <button type="button" class="btn btn-default btn-xs pull-right" style="margin-right:10px;color: white; background-color: #990707; border-color: #990707" data-toggle="modal" data-target="#agreinfo">
                     Agregar Informacion.
                   </button>
                 </div>

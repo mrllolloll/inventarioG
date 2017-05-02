@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -20,9 +20,9 @@
         ]); ?>
     </script>
 </head>
-<body>
+<body style="background-color: #ffffff">
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style="background-color: #c40909">
             <div class="container">
                 <div class="navbar-header">
 
@@ -50,10 +50,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            <li><a href="{{ url('/login') }}" style=" color: white;font-size: 20px">Login</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white; font-size:18px">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 

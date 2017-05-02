@@ -1,0 +1,7 @@
+En este archivo se guardan los comandos a usar en la consola que vaya viendo en los tutoriales
+
+-php artisan make:migration (para generar las migraciones en la carpeta migration tabla)
+-php artisan make:auth (crea autentificaión scaffolding, crea carpetas en las vistas en resources/views que colocan las opciones de Login y Register enla vista del home)
+-php artisan serve (corre el servidor de laravel)
+-composer create-project --prefer-dist laravel/laravel blog "5.3.*" (Crea un proyecto nuevo)
+-composer update (dentro del directorio del sistema, se usa para traer los repositorios necesarios para un funcionamiento correcto, como el composer.json)

@@ -3,7 +3,7 @@
   <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header" style="background-color: #c40909; color:white; font-size: 15px">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">@yield($titsle)</h4>
       </div>
