@@ -9,9 +9,9 @@ function CasoSelet11($value)
 ?>
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
-    <div class="panel-heading" style="background-color: #c40909; color:white; font-size: 15px">
+    <div class="panel-heading" id="modal">
       <h4 class="panel-title">
-         <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#AgreCamp1"  style="color: white; background-color: #990707; border-color: #990707">
+         <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#AgreCamp1"  style="" id="btnAgrCamp">
           Agregar Campos
 
         </button>
@@ -27,17 +27,18 @@ function CasoSelet11($value)
     background-color: rgb(246, 186, 164);
   }
 </style>
-<div class="panel-group" id="accordion" role="tablist">
-  <div class="panel panel-default" style="background-color: #c40909; color:white;">
+<div  class="panel-group" id="accordion" role="tablist">
+  <div class="panel panel-default" id="panel">
     <div class="panel-heading" role="tab" id="heading1" style="background-color: #c40909;color:white;">
       <h4 class="panel-title">
-          <a href="#seccion" class="panel-title holl" >
+          <a href="#collapse1" data-toggle="collapse" class="panel-title holl" >
           Titulos de Campos
           <span class="caret"></span>
           </a>
       </h4>
     </div>
-  </div>
+    </div>
+ 
 
   <?php
   $i1=0;
@@ -48,9 +49,9 @@ function CasoSelet11($value)
     echo '  <div class="panel panel-default">
       <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body" id="accordion">
-        <div class="panel-heading" style="background-color: #c40909; color:white;">
+        <div class="panel-heading" id="panel"">
           <h4 class="panel-title" >
-            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'" style="color:white ; font-size: 15px">
+            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'" id="modal">
               '.$i[$i1].'
             </a>
           </h4>
@@ -77,7 +78,7 @@ function CasoSelet11($value)
   }
   $i1=0;
   ?>
-
+ 
 </div>
 
 @include('formularios.agrecamptable')

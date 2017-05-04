@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div  class="panel panel-default">
-               <div class="panel-heading" style="background-color: #c40909; color: white;font-size: 20px">Login</div>
+               <div class="panel-heading" id="login">Login</div>
                 <div class="panel-body" style="background-color:#f9fbff"> 
                     <form class="form-horizontal" role="form" method="POST" action="<?php echo e(url('/login')); ?>">
                         <?php echo e(csrf_field()); ?>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary" style="background-color: #c40909; border-color:#c40909" >
+                                <button type="submit" class="btn btn-sm" id="login" >
                                     Login
                                 </button>
 

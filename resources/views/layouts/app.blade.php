@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -20,9 +20,9 @@
         ]); ?>
     </script>
 </head>
-<body style="background-color: #ffffff">
+<body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top" style="background-color: #c40909">
+        <nav class="navbar navbar-default navbar-static-top" id="fondoRojo">
             <div class="container">
                 <div class="navbar-header">
 
@@ -35,8 +35,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/home') }}" style=" padding-bottom: 40px;">
-                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" style="margin-top:-10px; height:60px; width:140px; "/>
+                    <a class="navbar-brand" href="{{ url('/home') }}" id="brand1">
+                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" id="brand2"/>
                     </a>
                 </div>
 
@@ -50,14 +50,14 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}" style=" color: white;font-size: 20px">Login</a></li>
+                            <li  ><a href="{{ url('/login') }}"  id="login" class="login">Login</a></li>
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white; font-size:18px">
+                            <li class="dropdown login">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="login" >
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu" role="menu"  id="fondoLog">
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
