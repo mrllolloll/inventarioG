@@ -30,3 +30,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('/tablerecurses','tablerecurses');
 Route::resource('/camp','agrcampos');
+Route::resource('/agre','AgrecamDinamic');
