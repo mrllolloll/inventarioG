@@ -14,10 +14,11 @@ function CasoSelet11($value)
 </script>
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-heading" id="modal">
       <h4 class="panel-title">
-         <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#AgreCamp1">
-          Agregar Campos.
+         <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#AgreCamp1"  style="" id="btnAgrCamp">
+          Agregar Campos
+
         </button>
       </h4>
     </div>
@@ -31,16 +32,19 @@ function CasoSelet11($value)
     background-color: rgb(246, 186, 164);
   }
 </style>
-<div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title holl">
+<div  class="panel-group" id="accordion" role="tablist">
+  <div class="panel panel-default" id="panel">
+    <div class="panel-heading" role="tab" id="heading1" style="background-color: #c40909;color:white;">
+      <h4 class="panel-title">
+          <a href="#collapse1" data-toggle="collapse" class="panel-title holl" >
           Titulos de Campos
+          <span class="caret"></span>
+          </a>
       </h4>
     </div>
-  </div>
-</div>
-<div class="panel-group" id="accordion">
+    </div>
+ 
+
   <?php
   $i1=0;
   foreach ($titutable as $o) {
@@ -48,9 +52,11 @@ function CasoSelet11($value)
     $mostar=CasoSelet11($i[$i1]);
     $kk=route('tablerecurses.destroy',["id"=>$o->id,"yolo"=>$mostar]);
     echo '  <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'">
+      <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body" id="accordion">
+        <div class="panel-heading" id="panel"">
+          <h4 class="panel-title" >
+            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'" id="modal">
               '.$i[$i1].'
             </a>
           </h4>
@@ -96,12 +102,15 @@ function CasoSelet11($value)
           </div>
         </div>
       </div>
+      </div>
+  </div>
       ';
 
     $i1++;
   }
   $i1=0;
   ?>
+ 
 </div>
 @include('formularios.agredual')
 @include('formularios.agrecamptable')
