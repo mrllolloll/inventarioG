@@ -1,0 +1,52 @@
+.login{
+
+	 font-size: 20px;
+}
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 20px;
+}
+
+#fondoRojo{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 18px;
+}
+#fondoLog{
+	background-color:#ef6e6e;
+}
+#brand1{
+	padding-bottom: 40px;
+}
+#brand2{
+	margin-top:-10px; 
+	height:60px; 
+	width:140px; 
+}
+
+#modal{
+	background-color: #c40909; 
+	color:white; 
+	font-size: 15px
+}
+#btnAgrCamp{
+	color: white; 
+	background-color: #990707; 
+	border-color: #990707
+}
+#btnAgrInf{
+	margin-right:10px;color: white; background-color: #990707; border-color: #990707
+}
+#panel{
+	background-color: #c40909; 
+	color:white;
+}
+.panelcolor{
+	background-color: #c40909; 
+	color:white;
+}
+.panel-heading{
+	background-color: #c40909; 
+	color:white;
+}
