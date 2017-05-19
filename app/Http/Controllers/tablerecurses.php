@@ -57,6 +57,10 @@ class tablerecurses extends Controller
         return "int";
 
       break;
+
+      case 'Dual':
+        return "Dual";
+      break;
     }
   }
 
@@ -100,13 +104,22 @@ class tablerecurses extends Controller
     $indicador = array(0=>"/ /");
     $sustitu = array(0=>"_");
     $mofi=preg_replace($indicador,$sustitu,$mofi1);
-    $sinta=$mofi." ".$descrip;
-    $results=DB::statement('Alter table table_centrals add '.$sinta);
-    $descript=$this->yolo($request->objet,$request->Fechaauto);
-    $nomert=new camptable;
-    $nomert->nomtable=$request->nommodul;
-    $nomert->nombclum=$descript;
-    $nomert->save();
+    if ($descrip!="Dual") {
+        $sinta=$mofi." ".$descrip;
+        $results=DB::statement('Alter table table_centrals add '.$sinta);
+        $descript=$this->yolo($request->objet,$request->Fechaauto);
+        $nomert=new camptable;
+        $nomert->nomtable=$request->nommodul;
+        $nomert->nombclum=$descript;
+        $nomert->save();
+    }else {
+      $results=DB::statement('Alter table table_centrals add '.$mofi.' int');
+      $results=DB::statement('CREATE TABLE tab_'.$mofi.' (id int NOT NULL AUTO_INCREMENT,info varchar(255) NOT NULL,PRIMARY KEY (id))');
+      $nomert=new camptable;
+      $nomert->nomtable=$request->nommodul;
+      $nomert->nombclum="Dual";
+      $nomert->save();
+    }
 
     return redirect('/home');
 

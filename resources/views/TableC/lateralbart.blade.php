@@ -7,6 +7,11 @@ function CasoSelet11($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 }
 ?>
+<script type="text/javascript">
+  function infot(value,value1){
+    $('#tool').val(value);
+  }
+</script>
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading" id="modal">
@@ -58,6 +63,31 @@ function CasoSelet11($value)
         </div>
         <div id="colas'.$i1.'" class="panel-collapse collapse">
           <div class="panel-body">
+            ';
+            if ($o->nombclum=='Dual') {
+              $data1 = DB::table('tab_'.$mostar)->get();
+            echo '
+            <table>
+            ';
+            foreach ($data1 as $h) {
+                echo $h->info;
+                echo "<br>";
+              }
+            echo'
+            <br>
+            <tr>
+              <form action="'.$kk.'" method="POST">
+                  '.csrf_field().'
+                  <div class="btn-group">
+                    <a href="#" type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
+                    <input type="submit" class="btn btn-danger btn-xs" value="Eliminar">
+                  </div>
+                  <input type="hidden" name="_method" value="DELETE">
+              </form>
+            </tr>
+            </table>';
+          }else {
+            echo '
             <table>
             <tr>
                   <form action="'.$kk.'" method="POST">
@@ -66,7 +96,9 @@ function CasoSelet11($value)
                   <input type="submit" class="btn btn-danger btn-xs" value="Eliminar">
              </form>
             </tr>
-            </table>
+            </table>';
+          }
+            echo '
           </div>
         </div>
       </div>
@@ -80,6 +112,6 @@ function CasoSelet11($value)
   ?>
  
 </div>
-
+@include('formularios.agredual')
 @include('formularios.agrecamptable')
 @include('formularios.agragrdat')
