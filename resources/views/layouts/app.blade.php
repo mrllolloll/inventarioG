@@ -19,7 +19,6 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-    <script src="/js/app.js"></script>
 </head>
 <body>
     <div id="app">
@@ -36,8 +35,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('/home') }}" style=" padding-bottom: 40px;">
+                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" style="margin-top:-10px; height:60px; width:140px; "/>
                     </a>
                 </div>
 
@@ -52,7 +51,6 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -78,11 +76,12 @@
                 </div>
             </div>
         </nav>
-
+        <!-- Scripts -->
+        <script src="/js/app.js"></script>
         @yield('content')
     </div>
 
-    <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    @include('layouts.datespicker')
+
 </body>
 </html>
