@@ -38,24 +38,7 @@ function CasoSeletr3($value)
           });
           </script>
           ';
-        }elseif ($dates=="Dual") {
-          $dualar="tab_";
-          $dualar.=$fatamano;
-          $data = DB::table($dualar)->get();
-          echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">';
-          echo '<select id="id'.$fatamano.'" name="'.$i1.'" class="form-control" required>';
-          echo '<option value="">Seleccionar una opcion</option>';
-          foreach ($data as $datas) {
-            if ($camper->$fatamano == $datas->id ) {
-                echo '<option value="'.$datas->id.'" selected>'.$datas->info.'</option>';
-            }else {
-                echo '<option value="'.$datas->id.'">'.$datas->info.'</option>';
-            }
-          }
-          echo '</select>';
-          echo '</section>
-                </section>';
-        }else{
+        }else {
         echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" value="'.$camper->$fatamano.'" class="form-control"></section></section>';
       }
     }

@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\TableCentral;
 use Illuminate\Support\Facades\DB;
 use App\camptable;
-use Illuminate\Support\Facades\Auth;
 
 class agrcampos extends Controller
 {
@@ -59,7 +58,7 @@ class agrcampos extends Controller
         }
         $i1++;
       }
-      $insertado = DB::insert('insert into table_centrals (user_id'.$fatamano.') values ('.Auth::user()->id.''.$yolito.')');
+      $insertado = DB::insert('insert into table_centrals (user_id'.$fatamano.') values (1'.$yolito.')');
       $i1=0;
       return redirect('/home');
 

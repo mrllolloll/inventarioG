@@ -35,7 +35,6 @@ $.extend($.expr[":"],
 </script>
 
 <section class="table-responsive">
-<<<<<<< HEAD
   <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))
     <thead>
@@ -56,48 +55,22 @@ $.extend($.expr[":"],
 
       <?php
       $i1=0;
-      $i2=0;
+
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
-        if ($o->nombclum=="Dual") {
-          $i0[$i2]=true;
-        }else {
-          $i0[$i2]=false;
-        }
-        $i2++;
         $i1++;
       }
 
       $i1=0;
-      $i2=0;
       foreach ($table as $lol) {
         echo "<tr>";
         while ($i1 < count($i)) {
           $mostar=CasoSelet($i[$i1]);
-          if ($i0[$i2]!="Dual") {
-            echo "<td>".$lol->$mostar."</td>";
-          }else {
-            $busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first();
-            echo "<td>".$busc->info."</td>";
-          }
-          $i2++;
+          echo "<td>".$lol->$mostar."</td>";
           $i1++;
         }
         $i1=0;
-        $i2=0;
         $kk=route('camp.destroy',$lol->id);
-=======
-    <table class="table table-striped table-hover table-condensed">
-        <thead>
-            <tr>
-                <th>Identificador</th>
-                <th>subido por</th>
-                <th>Ultima actualizacion</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
->>>>>>> parent of 912fca3... vistas y Varios controladores
 
        echo"
        <td>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TableCentral;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
 use App\camptable;
 
@@ -58,10 +57,6 @@ class tablerecurses extends Controller
         return "int";
 
       break;
-
-      case 'Dual':
-        return "Dual";
-      break;
     }
   }
 
@@ -87,22 +82,9 @@ class tablerecurses extends Controller
         return "number";
 
       break;
-=======
-
-class tablerecurses extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
->>>>>>> parent of 912fca3... vistas y Varios controladores
     }
+  }
 
-<<<<<<< HEAD
 
   public function store(Request $request)
   {
@@ -118,84 +100,52 @@ class tablerecurses extends Controller
     $indicador = array(0=>"/ /");
     $sustitu = array(0=>"_");
     $mofi=preg_replace($indicador,$sustitu,$mofi1);
-    if ($descrip!="Dual") {
-        $sinta=$mofi." ".$descrip;
-        $results=DB::statement('Alter table table_centrals add '.$sinta);
-        $descript=$this->yolo($request->objet,$request->Fechaauto);
-        $nomert=new camptable;
-        $nomert->nomtable=$request->nommodul;
-        $nomert->nombclum=$descript;
-        $nomert->save();
-    }else {
-      $results=DB::statement('Alter table table_centrals add '.$mofi.' int');
-      $results=DB::statement('CREATE TABLE tab_'.$mofi.' (id int NOT NULL AUTO_INCREMENT,info varchar(255) NOT NULL,PRIMARY KEY (id))');
-      $nomert=new camptable;
-      $nomert->nomtable=$request->nommodul;
-      $nomert->nombclum="Dual";
-      $nomert->save();
-    }
+    $sinta=$mofi." ".$descrip;
+    $results=DB::statement('Alter table table_centrals add '.$sinta);
+    $descript=$this->yolo($request->objet,$request->Fechaauto);
+    $nomert=new camptable;
+    $nomert->nomtable=$request->nommodul;
+    $nomert->nombclum=$descript;
+    $nomert->save();
 
     return redirect('/home');
 
   }
-=======
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
->>>>>>> parent of 912fca3... vistas y Varios controladores
+  /**
+  * Display the specified resource.
+  *
+  * @param  int  $id
+  * @return \Illuminate\Http\Response
+  */
+  public function show($id)
+  {
+    //
+  }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+  /**
+  * Show the form for editing the specified resource.
+  *
+  * @param  int  $id
+  * @return \Illuminate\Http\Response
+  */
+  public function edit($id)
+  {
+    //
+  }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+  /**
+  * Update the specified resource in storage.
+  *
+  * @param  \Illuminate\Http\Request  $request
+  * @param  int  $id
+  * @return \Illuminate\Http\Response
+  */
+  public function update(Request $request, $id)
+  {
+    //
+  }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-<<<<<<< HEAD
   /**
   * Remove the specified resource from storage.
   *
@@ -208,16 +158,4 @@ class tablerecurses extends Controller
     $results=DB::statement('alter table table_centrals drop column '.$_GET['yolo']);
     return back();
   }
-=======
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
->>>>>>> parent of 912fca3... vistas y Varios controladores
 }
