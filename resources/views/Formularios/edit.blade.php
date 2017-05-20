@@ -54,7 +54,7 @@ function CasoSeletr3($value)
   </section>
   <section class="form-group">
     <section class="col-md-2 col-md-offset-4">
-      <button class="btn btn-primary">
+      <button class="btn btn-blanco-modal">
         Registrar
       </button>
     </section>

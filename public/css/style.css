@@ -2,6 +2,9 @@
 
 	 font-size: 20px;
 }
+#b{
+	color: #000000;
+}
 #login{
 	color: #ffffff;
 	background-color:#c40909;
@@ -30,13 +33,21 @@
 	color:white; 
 	font-size: 15px
 }
-#btnAgrCamp{
-	color: white; 
-	background-color: #990707; 
-	border-color: #990707
+
+#modalC{
+	background-color: #b71c1c;
+	color:white; 
+	font-size: 15px
 }
+#btnAgrCamp{
+	margin-bottom: 100px
+	margin-right: 10px;
+}
+
 #btnAgrInf{
-	margin-right:10px;color: white; background-color: #990707; border-color: #990707
+	margin-right:10px;
+	border-color: #990707; 
+	margin-bottom: 20px
 }
 #panel{
 	background-color: #c40909; 
@@ -49,4 +60,136 @@
 .panel-heading{
 	background-color: #c40909; 
 	color:white;
+}
+.btn .btn-place{
+	margin-bottom: 100px
+}
+
+.btn-blanco{
+	background-color: #ffffff;
+} 
+.btn-blanco:hover {
+  background: #d1d1d1;
+  background-image: -webkit-linear-gradient(top, #d1d1d1, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #d1d1d1, #d1d1d1);
+  background-image: -ms-linear-gradient(top, #d1d1d1, #d1d1d1);
+  background-image: -o-linear-gradient(top, #d1d1d1, #d1d1d1);
+  background-image: linear-gradient(to bottom, #d1d1d1, #d1d1d1);
+  text-decoration: none;
+}
+
+.btn-eliminar{
+	color: white;
+	background-color: #820000;
+}
+
+.btn-eliminar:hover{
+  background: #a61c1c;
+  color: white;
+  background-image: -webkit-linear-gradient(top, #a61c1c, #a61c1c);
+  background-image: -moz-linear-gradient(top, #a61c1c, #a61c1c);
+  background-image: -ms-linear-gradient(top, #a61c1c, #a61c1c);
+  background-image: -o-linear-gradient(top, #a61c1c, #a61c1c);
+  background-image: linear-gradient(to bottom, #a61c1c, #a61c1c);
+  text-decoration: none;
+
+}
+
+#letra-blanca{
+	color:white;
+}
+
+#PDF{
+	border-right: 1px; 
+	border-left: 0px; 
+	border-bottom: 0px; 
+	border-top: 0px; 
+	border-style: solid; 
+	border-color: #9E9E9E;
+}
+
+.btn-blanco-modal{
+	background-color: #EEEEEE;
+}
+
+.btn-blanco-modal:hover{
+  background-color: #EEEEEE;
+  background: #d1d1d1;
+  background-image: -webkit-linear-gradient(top, #d1d1d1, #d1d1d1);
+  background-image: -moz-linear-gradient(top, #d1d1d1, #d1d1d1);
+  background-image: -ms-linear-gradient(top, #d1d1d1, #d1d1d1);
+  background-image: -o-linear-gradient(top, #d1d1d1, #d1d1d1);
+  background-image: linear-gradient(to bottom, #d1d1d1, #d1d1d1);
+  text-decoration: none;
+}
+
+
+#menu-lateral{
+	background-color: #c40909;
+	border:1px; 
+	border-style: solid; 
+	color:white;
+	border-color: #d50000;
+}
+
+.tituloCampos-lateral{
+	font-weight: 900;
+}
+
+.panel .panel-lateral{
+	background-color: #c40909;
+	color:white;
+}
+
+
+.panel .panel-lateral:hover{
+	background-color: #c40909;
+	color:white;
+}
+
+#divisor-lateral{
+	border-color: #d50000; 
+	margin-bottom: 0px; 
+	margin-top:0px;
+}
+
+.nombre-tablas{
+	font-size: 16px; 
+	font-weight:500
+}
+
+.btn .btn-agregarC{
+	margin-bottom: 20px; 
+	margin-left: -6px;
+
+}
+#agregarC{
+	margin-top:  20px;
+}
+
+#btn-grupo-home{
+	margin-top: -8px;
+}
+
+.contenedor-lateral{
+	margin-left: -70px; 
+	margin-top: -20px
+}
+
+#grupo-lateral{
+	overflow-y: scroll; 
+	height: 613px;  
+	width: 250px;
+	background-color: #b71c1c;
+}
+
+@media screen and (max-width: 768px){
+
+	#panel-lateral{
+	margin-left: 10px;
+	width:1480px;
+	}
+	
+
+
 }
