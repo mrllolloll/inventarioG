@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 function CasoSelet11($value)
 {
@@ -12,6 +13,8 @@ function CasoSelet11($value)
     $('#tool').val(value);
   }
 </script>
+=======
+>>>>>>> parent of 912fca3... vistas y Varios controladores
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading" id="modal">
@@ -43,6 +46,7 @@ function CasoSelet11($value)
       </h4>
     </div>
     </div>
+<<<<<<< HEAD
  
 
   <?php
@@ -102,6 +106,39 @@ function CasoSelet11($value)
           </div>
         </div>
       </div>
+=======
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Modules</a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <table class="table">
+          <tr>
+            <td>
+              Orders <span class="label label-success">$ 320</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Invoices
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Shipments
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Tex
+            </td>
+          </tr>
+        </table>
+>>>>>>> parent of 912fca3... vistas y Varios controladores
       </div>
   </div>
       ';
@@ -112,6 +149,8 @@ function CasoSelet11($value)
   ?>
  
 </div>
+<<<<<<< HEAD
 @include('formularios.agredual')
+=======
+>>>>>>> parent of 912fca3... vistas y Varios controladores
 @include('formularios.agrecamptable')
-@include('formularios.agragrdat')

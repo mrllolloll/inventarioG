@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="{{$idmodal}}" class="modal fade" role="dialog">
+<div id="AgreCamp1" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">

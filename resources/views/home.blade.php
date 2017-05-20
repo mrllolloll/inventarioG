@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 @include('errors.errorhtmlj')
+=======
+>>>>>>> parent of 912fca3... vistas y Varios controladores
 <div class="container">
     <div class="row">
       <aside class="col-md-2">
@@ -31,5 +34,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @include('Formularios.getod')
+=======
+>>>>>>> parent of 912fca3... vistas y Varios controladores
 @endsection

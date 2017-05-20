@@ -35,6 +35,7 @@ $.extend($.expr[":"],
 </script>
 
 <section class="table-responsive">
+<<<<<<< HEAD
   <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))
     <thead>
@@ -85,6 +86,18 @@ $.extend($.expr[":"],
         $i1=0;
         $i2=0;
         $kk=route('camp.destroy',$lol->id);
+=======
+    <table class="table table-striped table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>Identificador</th>
+                <th>subido por</th>
+                <th>Ultima actualizacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+>>>>>>> parent of 912fca3... vistas y Varios controladores
 
        echo"
        <td>
