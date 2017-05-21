@@ -19,6 +19,8 @@
         <option value="text">Texto</option>
         <option value="number">Numeros </option>
 
+        <option value="Dual">Dual </option>
+
       </select>
       
     </section>
@@ -51,3 +53,4 @@ $("#selecto").click(function(){
 });
 </script>
 @endsection
+<!-- En nombre de Dios todo saldra bien que se haga tu voluntad y no la mia-->
