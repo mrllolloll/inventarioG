@@ -13,7 +13,8 @@ function CasoSelet11($value)
     <div class="panel-heading" id="modalC">
       <center>
       <h4 class="panel-title">
-         <button type="button" class="btn btn-blanco btn-sm btn-agregarC" id="agregarC" data-toggle="modal" data-target="#AgreCamp1">
+         <button type="button" class="btn btn-blanco btn-sm btn-agregarC"  id="agregarC" data-toggle="modal" data-target="#AgreCamp1">
+         
           Agregar Campos
           
         </button>

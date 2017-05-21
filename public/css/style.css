@@ -173,7 +173,10 @@
 
 .contenedor-lateral{
 	margin-left: -70px; 
-	margin-top: -20px
+	margin-top: -20px;
+	position: absolute;
+	left: auto;
+	float: left;
 }
 
 #grupo-lateral{
@@ -183,13 +186,74 @@
 	background-color: #b71c1c;
 }
 
-@media screen and (max-width: 768px){
+#tabla-home{
 
-	#panel-lateral{
-	margin-left: 10px;
-	width:1480px;
-	}
+}
+
+#pos-brand{
 	
+}
 
+#pos-login{
+
+}
+
+
+
+@media screen and (min-width: 1680px){
+
+	.contenedor-lateral{
+	margin-left: -377px; 
+	margin-top: -20px;
+	position: absolute;
+	left: auto;
+	float: left;
+}
+	#grupo-lateral{
+	overflow-y: scroll; 
+	height: 1050px;  
+	width: 430px;
+	background-color: #b71c1c;
+}
+
+#tabla-home{
+	margin-left: 120px;
+	width: 1370px;
+}
+
+.btn .btn-agregarC{
+	margin-bottom: 20px; 
+	margin-left: -6px;
+	width: 100px;
+
+}
+#agregarC{
+	margin-top:  20px;
+	width: 280px; 
+	display:block;
+    border-radius: 5%;
+    margin-bottom: 35px
+
+}
+
+
+#brand1{
+	padding-bottom: 40px;
+	margin-left: -360px;
+}	
+
+
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 20px;
+	margin-left: : -500px;
+
+}
+
+#pos-brand{
+	margin-right: -360px;
+}
 
 }

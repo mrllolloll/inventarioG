@@ -59,7 +59,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" id="pos-brand" style="" >
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li  ><a href="{{ url('/login') }}"  id="login" class="login">Login</a></li>
