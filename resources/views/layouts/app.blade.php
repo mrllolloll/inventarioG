@@ -10,21 +10,22 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles    
+       
     <link href="/css/app.css" rel="stylesheet"> 
-    -->
+   
 
     
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+   
+   <link rel="stylesheet" type="text/css" href="/css/roboto.css">
+    
     <!-- Bootstrap -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
       <!-- Bootstrap Material Design -->
       <link href="/css/bootstrap-material-design.css" rel="stylesheet">
       <link href="/css/ripples.min.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="/css/style.css">
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -90,8 +91,8 @@
         </nav>
         <!-- Scripts
         <script src="/js/app.js"></script> -->
-        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/js/jquery-1.10.2.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
         <script src="/js/ripples.min.js"></script>
         <script src="/js/material.min.js"></script>
         <script>

@@ -12,14 +12,15 @@
   <section class="form-group">
     <label for="proyectid" class="col-md-4">Tipo de modulo:</label>
     <section class="col-md-8">
-     <select id="selecto" class="select form-control col-md-4" name="objet" required> 
+     <div>
+      <select id="selecto" class="select form-control col-md-4" name="objet" required> 
         <option value="">Seleccione una opción. </option>
         <option value="Fecth">Fechas</option>
         <option value="text">Texto</option>
         <option value="number">Numeros </option>
 
       </select>
-      <span class="caret"></span>
+      
     </section>
 
   </section>
