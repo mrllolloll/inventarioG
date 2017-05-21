@@ -9,15 +9,24 @@
           @include('TableC.lateralbart')
         @endif
       </aside>
-        <div class="col-md-10">
+        <div class="col-md-10" id="tabla-home">
             <div class="panel panel-default">
+                
                 <div class="panel-heading" id="fondoRojo">Tabla de Administracion
-                  <button type="button" class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#Alo">
-                    PDF
-                  </button>
-                  <button type="button" class="btn btn-default btn-xs pull-right" id="btnAgrInf" data-toggle="modal" data-target="#agreinfo">
-                    Agregar Informacion.
-                  </button>
+                  
+                  <div class="btn-toolbar pull-right" id="btn-grupo-home">
+                      
+                      <div class="btn-group btn-group-sm pull-right">
+                        <button type="button" class="btn btn-blanco btn-xs" data-toggle="modal" id="PDF" data-target="#Alo">
+                          PDF
+                        </button> 
+                        <button type="button" class="btn btn-blanco btn-xs" id="btnAgrInf" data-toggle="modal" data-target="#agreinfo">
+                          Agregar Informacion.
+                        </button>
+                      </div>
+
+                    </div>
+
                 </div>
 
                 <div class="panel-body">

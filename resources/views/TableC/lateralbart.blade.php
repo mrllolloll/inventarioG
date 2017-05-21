@@ -7,6 +7,12 @@ function CasoSelet11($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 }
 ?>
+<div class="contenedor-lateral">
+<div class="panel-group" id="grupo-lateral">
+  <div class="panel panel-default" id="panel-lateral">
+    <div class="panel-heading" id="modalC">
+      <center>
+
 <script type="text/javascript">
   function infot(value,value1){
     $('#tool').val(value);
@@ -15,15 +21,18 @@ function CasoSelet11($value)
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading" id="modal">
-      <h4 class="panel-title">
-         <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#AgreCamp1"  style="" id="btnAgrCamp">
-          Agregar Campos
 
+      <h4 class="panel-title">
+         <button type="button" class="btn btn-blanco btn-sm btn-agregarC"  id="agregarC" data-toggle="modal" data-target="#AgreCamp1">
+         
+          Agregar Campos
+          
         </button>
       </h4>
+      </center>
     </div>
-  </div>
-</div>
+ 
+
 <style media="screen">
   .holl{
     font-size: 13px;
@@ -32,17 +41,14 @@ function CasoSelet11($value)
     background-color: rgb(246, 186, 164);
   }
 </style>
-<div  class="panel-group" id="accordion" role="tablist">
+
+<div  class="panel-group" id="" role="tablist">
   <div class="panel panel-default" id="panel">
-    <div class="panel-heading" role="tab" id="heading1" style="background-color: #c40909;color:white;">
-      <h4 class="panel-title">
-          <a href="#collapse1" data-toggle="collapse" class="panel-title holl" >
-          Titulos de Campos
-          <span class="caret"></span>
-          </a>
-      </h4>
-    </div>
-    </div>
+    <div class="panel-heading" role="tab" id="menu-lateral" style="">
+      <h5 class="tituloCampos-lateral pull">Titulos de Campos</h5>
+
+  
+  
  
 
   <?php
@@ -51,14 +57,18 @@ function CasoSelet11($value)
     $i[$i1]=$o->nomtable;
     $mostar=CasoSelet11($i[$i1]);
     $kk=route('tablerecurses.destroy',["id"=>$o->id,"yolo"=>$mostar]);
-    echo '  <div class="panel panel-default">
+    echo '  
+    <hr id="divisor-lateral">
       <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body" id="accordion">
-        <div class="panel-heading" id="panel"">
-          <h4 class="panel-title" >
-            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'" id="modal">
+      <div class="panel-body panel-lateral" id="accordion">
+        <div class="panel-heading" id="panel">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'" id="modal" class="nombre-tablas">
               '.$i[$i1].'
+               <span class="caret pull-right" style="margin-top: 5px"></span>
             </a>
+           
+
           </h4>
         </div>
         <div id="colas'.$i1.'" class="panel-collapse collapse">
@@ -93,25 +103,39 @@ function CasoSelet11($value)
                   <form action="'.$kk.'" method="POST">
                   '.csrf_field().'
                   <input type="hidden" name="_method" value="DELETE">
-                  <input type="submit" class="btn btn-danger btn-xs" value="Eliminar">
+                  <input type="submit" class="btn btn-eliminar btn-xs" id="letra-blanca" value="Eliminar">
              </form>
             </tr>
+
+            </table>
+         
+
             </table>';
           }
             echo '
           </div>
+
         </div>
       </div>
       </div>
   </div>
+   
       ';
 
     $i1++;
   }
+  echo '<hr id="divisor-lateral">';
   $i1=0;
   ?>
- 
+  </div>
 </div>
+
+  </div>
+    </div>
+    </div>
+    </div>
+
 @include('formularios.agredual')
+
 @include('formularios.agrecamptable')
 @include('formularios.agragrdat')
