@@ -21,11 +21,9 @@ function CasoSelet11($value)
       <h4 class="panel-title">
        <center> 
          <button type="button" class="btn btn-blanco btn-sm btn-agregarC"  id="agregarC" data-toggle="modal" data-target="#AgreCamp1">
-       
-          Agregar Campos
-          
-
+         Agregar Campos
         </button>
+
         </center>
       </h4>
     </div>
