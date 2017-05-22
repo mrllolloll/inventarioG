@@ -47,7 +47,12 @@ function CasoSelet11($value)
     </div>
   </div>
 
-  
+     </div>
+
+</div>
+
+
+ 
   <?php
   $i1=0;
   foreach ($titutable as $o) {
@@ -118,13 +123,11 @@ function CasoSelet11($value)
   }
   $i1=0;
 ?>
-  
-
-    </div>
-</div>
  </div>
-  </div>
-  </div>
+ </div>
+    </div>
+
+
 @include('formularios.agredual')
 @include('formularios.agrecamptable')
 @include('formularios.agragrdat')

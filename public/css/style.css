@@ -69,6 +69,7 @@
 
 .btn-blanco{
 	background-color: #ffffff;
+	font-weight: 900;
 }
 
 #margenBtnFront{
@@ -143,15 +144,16 @@
 
 #menu-lateral{
 	background-color: #c40909;
-	border:1px; 
+	border:0px; 
 	border-style: solid; 
 	color:white;
-	border-color: #d50000;
+	
 
 }
 
 .tituloCampos-lateral{
 	font-weight: 900;
+
 }
 
 .panel .panel-lateral{
@@ -186,6 +188,7 @@
 #agregarC{
 	margin-top:  20px;
 	margin-bottom: 20px;
+	font-weight: 900;
 
 }
 
@@ -196,7 +199,6 @@
 .contenedor-lateral{
 	
 	margin-left: -70px; 
-
 	margin-top: -26px;
 	position: absolute;
 	left: auto;
@@ -313,6 +315,7 @@
     font-family: Roboto;
     font-style: bold;
     font-size: 10px;
+    font-weight: 900;
 
 
 }
@@ -387,6 +390,7 @@
     font-family: Roboto;
     font-style: bold;
     font-size: 12px;
+    font-weight: 900;
 
 
 }
@@ -463,6 +467,7 @@
     font-family: Roboto;
     font-style: bold;
     font-size: 14px;
+    font-weight: 900;
 
 
 }
@@ -536,6 +541,7 @@
 	display:block;
   
     margin-bottom: 35px
+    font-weight: 900;
 
 }
 
@@ -607,7 +613,7 @@
 	
 	width: 80%; 
 	display:block;
-  
+  font-weight: 900;
     margin-bottom: 35px
 
 }
@@ -679,7 +685,7 @@
 	
 	width: 80%; 
 	display:block;
-  
+  font-weight: 900;	
     margin-bottom: 35px
 
 }
