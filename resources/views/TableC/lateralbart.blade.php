@@ -21,7 +21,7 @@ function CasoSelet11($value)
       <h4 class="panel-title">
        <br>
        <center> 
-         <button type="button" class="btn btn-blanco btn-sm btn-agregarC"  id="agregarC" data-toggle="modal" data-target="#AgreCamp1">
+         <button type="button" class="btn btn-blanco btn-sm btn-agregarC Roboto"  id="agregarC" data-toggle="modal" data-target="#AgreCamp1">
          Agregar Campos
         </button>
 
@@ -40,18 +40,16 @@ function CasoSelet11($value)
   }
 </style>
 <div  class="panel-group" id="" role="tablist">
-  <div class="panel panel-default" id="panel">
-    <div class="panel-heading" role="tab" id="menu-lateral">
-      <h5 class="tituloCampos-lateral pull"><center>Titulos de Campos</center></h5>
-     
-    </div>
-  </div>
+
 
      </div>
 
 </div>
 
-
+ <div class="panel-heading" role="tab" id="menu-lateral">
+      <h5 class="tituloCampos-lateral"><center>Titulos de Campos</center></h5>
+     
+  </div>
  
   <?php
   $i1=0;
