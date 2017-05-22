@@ -200,7 +200,7 @@
 .contenedor-lateral{
 	position: fixed;
 	margin-left: -73px; 
-	margin-top: 50px;
+	margin-top: 62px;
 	left: auto;
 	float: left;
 	background-color: #b71c1c;
@@ -291,7 +291,7 @@
 .contenedor-lateral{
 	margin-left: -142px; 
 	margin-top: 50px;
-	position: absolute;
+	
 	left: auto;
 	float: left;
 	background-color: #b71c1c;
@@ -370,7 +370,7 @@
 
 	margin-left: -235px; 
 	margin-top: 57px;
-	position: absolute;
+	
 	left: auto;
 	float: left;
 	background-color: #b71c1c;
@@ -451,7 +451,7 @@
 .contenedor-lateral{
 	margin-left: -284px; 
 	margin-top: 57px;
-	position: absolute;
+	
 	left: auto;
 	float: left;
 	background-color: #b71c1c;
@@ -542,8 +542,11 @@
 }
 
 #tabla-home{
-	
+	margin-left: -20px;
 	margin-top: 510px;
+	width: 500px;
+	
+	
 	
 }
 
