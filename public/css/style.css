@@ -194,7 +194,7 @@
 }
 
 #btn-grupo-home{
-	margin-top: -8px;
+	margin-top: -10px;
 }
 
 .contenedor-lateral{
@@ -386,7 +386,7 @@
 
 #tabla-home{
 	margin-left: 200px;
-	width: 1050px;
+	width: 1150px;
 }
 
 .btn .btn-agregarC{
@@ -435,7 +435,7 @@
 	border-top: 0px; 
 	border-style: solid; 
 	border-color: #9E9E9E;
-	padding-bottom: 7px;
+	padding-bottom: 8px;
 }
 .panel-central{
 	margin-top: 20px
@@ -513,7 +513,7 @@
 	border-top: 0px; 
 	border-style: solid; 
 	border-color: #9E9E9E;
-	padding-bottom: 7px;
+	padding-bottom: 8px;
 }
 .panel-central{
 	margin-top: 20px
@@ -521,11 +521,87 @@
 
 }
 
+@media screen and (min-width: 1920px){
+
+.contenedor-lateral{
+	margin-left: -391px; 
+	margin-top: 57px;
+	
+	left: auto;
+	float: left;
+	background-color: #b71c1c;
+	overflow-y: scroll;
+	margin-bottom: 0px;
+}
+#grupo-lateral{
+	height: 1060px;  
+	width: 430px;	
+}
+
+#tabla-home{
+	margin-left: 90px;
+	width: 1400px;
+}
+
+.btn .btn-agregarC{
+	margin-bottom: 20px; 
+	margin-left: -6px;
+
+}
+#agregarC{
+	margin-top:  20px;
+	width: 190px; 
+	display:block;
+    border-radius: 5%;
+    margin-bottom: 35px;
+    font-family: Roboto;
+    font-style: bold;
+    font-size: 14px;
+    font-weight: 900;
+
+
+}
+
+
+#brand1{
+	padding-bottom: 40px;
+	margin-left: -265px;
+}	
+
+
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 20px;
+	margin-left: : -500px;
+
+}
+
+#pos-brand{
+	margin-right: -260px;
+}
+#PDF{
+	border-right: 1px; 
+	border-left: 0px; 
+	border-bottom: 0px; 
+	border-top: 0px; 
+	border-style: solid; 
+	border-color: #9E9E9E;
+	padding-bottom: 8px;
+}
+.panel-central{
+	margin-top: 20px
+}
+
+}
+
+
 @media screen and (max-width: 768px){
 
 .contenedor-lateral{
 	margin-left: -277px; 
-	margin-top: -20px;
+	margin-top: 20px;
 	position: absolute;
 	left: auto;
 	float: left;
@@ -537,14 +613,14 @@
 	overflow-y: scroll; 
 	margin-left: 260px;
 	height:500px;  
-	width: 750px;
+	width: 300px;
 
 }
 
 #tabla-home{
 	margin-left: -20px;
 	margin-top: 510px;
-	width: 500px;
+	width: 640px;
 	
 	
 	
@@ -605,7 +681,7 @@
 
 .contenedor-lateral{
 	margin-left: -277px; 
-	margin-top: -20px;
+	margin-top: 20px;
 	position: absolute;
 	left: auto;
 	float: left;
@@ -623,7 +699,7 @@
 
 #tabla-home{
 	margin-left: -70px;
-	margin-top: 510px;
+	margin-top: 530px;
 	width: 850px
 	
 }
@@ -681,7 +757,7 @@
 
 .contenedor-lateral{
 	margin-left: -230px; 
-	margin-top: -20px;
+	margin-top: 20px;
 	position: absolute;
 	left: auto;
 	float: left;
@@ -699,7 +775,7 @@
 
 #tabla-home{
 	margin-left: -20px;
-	margin-top: 510px;
+	margin-top: 530px;
 	width: 640px
 	
 	
