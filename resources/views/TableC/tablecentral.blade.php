@@ -91,9 +91,9 @@ $.extend($.expr[":"],
        <form  action='".$kk."' method='POST'>
           ".csrf_field()."
         <div class='btn-group'>
-        <a href='/camp/".$lol->id."/edit' class='btn btn-primary btn-xs'>Editar</a>
+        <a href='/camp/".$lol->id."/edit' class='btn btn-blanco btn-xs' id='margenBtnFront'>Editar</a>
             <input type='hidden' name='_method' value='DELETE'>
-            <input type='submit' class='btn btn-danger btn-xs' value='Borrar'>
+            <input type='submit' class='btn btn-danger btn-xs' id='margenBtnFront' value='Borrar'>
         </form>
         </div>
        </td>

@@ -12,7 +12,7 @@
   <section class="form-group">
     <label for="proyectid" class="col-md-4">Tipo de modulo:</label>
     <section class="col-md-8">
-      <select id="selecto" class="select" name="objet" required>
+      <select  id="selecto" class="select form-control col-md-4" name="objet" required>
         <option value="">Seleccione una opción.</option>
         <option value="Fecth">Fechas</option>
         <option value="text">Texto</option>
@@ -28,7 +28,7 @@
   </section>
   <section class="form-group">
     <section class="col-md-2 col-md-offset-4">
-      <button class="btn btn-primary">
+      <button class="btn btn-blanco-modal">
         Registrar
       </button>
     </section>
