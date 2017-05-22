@@ -199,20 +199,21 @@
 
 .contenedor-lateral{
 	
-	margin-left: -70px; 
-	margin-top: -27px;
-	position: absolute;
+	margin-left: -73px; 
+	margin-top: -29px;
 	left: auto;
 	float: left;
-	height: 700px;
+	background-color: #b71c1c;
+	overflow-y: scroll;
+	margin-bottom: -4px; 
+	
 }
 
 #grupo-lateral{
-	overflow-y: scroll; 
-	height: 700px;  
-	width: 270px;
+	
+	height: 638px;  
+	width: 250px;
 	background-color: #b71c1c;
-	padding-bottom: 100px;
 
 }
 
@@ -286,15 +287,18 @@
 @media screen and (min-width: 1366px){
 
 .contenedor-lateral{
-	margin-left: -133px; 
+	margin-left: -142px; 
 	margin-top: -20px;
 	position: absolute;
 	left: auto;
 	float: left;
+	background-color: #b71c1c;
+	overflow-y: scroll;
+	margin-bottom: 0px;
 }
-	#grupo-lateral{
-	overflow-y: scroll; 
-	height: 730px;  
+#grupo-lateral{
+	
+	height: 707px;  
 	width: 330px;
 	background-color: #b71c1c;
 }
@@ -361,17 +365,20 @@
 @media screen and (min-width: 1440px){
 
 .contenedor-lateral{
-	margin-left: -223px; 
+	margin-left: -235px; 
 	margin-top: -20px;
 	position: absolute;
 	left: auto;
 	float: left;
+	background-color: #b71c1c;
+	overflow-y: scroll;
+	margin-bottom: 0px;
 }
 	#grupo-lateral{
-	overflow-y: scroll; 
-	height: 850px;  
+	
+	height: 803px; 
 	width: 400px;
-	background-color: #b71c1c;
+	
 }
 
 #tabla-home{
@@ -439,17 +446,18 @@
 @media screen and (min-width: 1680px){
 
 .contenedor-lateral{
-	margin-left: -277px; 
+	margin-left: -284px; 
 	margin-top: -20px;
 	position: absolute;
 	left: auto;
 	float: left;
+	background-color: #b71c1c;
+	overflow-y: scroll;
+	margin-bottom: 0px;
 }
 	#grupo-lateral{
-	overflow-y: scroll; 
-	height: 900px;  
-	width: 430px;
-	background-color: #b71c1c;
+	height: 860px;  
+	width: 430px;	
 }
 
 #tabla-home{
@@ -518,13 +526,16 @@
 	position: absolute;
 	left: auto;
 	float: left;
+	background-color: #b71c1c;
+	overflow-y: scroll;
+	margin-bottom: 0px;
 }
 	#grupo-lateral{
 	overflow-y: scroll; 
 	margin-left: 260px;
 	height:500px;  
 	width: 750px;
-	background-color: #b71c1c;
+
 }
 
 #tabla-home{
@@ -592,13 +603,16 @@
 	position: absolute;
 	left: auto;
 	float: left;
+	background-color: #b71c1c;
+	overflow-y: scroll;
+	margin-bottom: 0px;
 }
 	#grupo-lateral{
 	overflow-y: scroll; 
 	margin-left: 215px;
 	height:500px;  
 	width: 854px;
-	background-color: #b71c1c;
+	
 }
 
 #tabla-home{
@@ -664,13 +678,16 @@
 	position: absolute;
 	left: auto;
 	float: left;
+	background-color: #b71c1c;
+	overflow-y: scroll;
+	margin-bottom: 0px;
 }
 	#grupo-lateral{
 	overflow-y: scroll; 
 	margin-left: 215px;
 	height:500px;  
 	width: 640px;
-	background-color: #b71c1c;
+	
 }
 
 #tabla-home{

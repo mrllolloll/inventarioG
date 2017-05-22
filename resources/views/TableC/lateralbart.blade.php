@@ -13,7 +13,9 @@ function CasoSelet11($value)
   }
 </script>
 
-<div class="contenedor-lateral">
+
+
+<div class="contenedor-lateral" style="margin-bottom: 0px;">
 <div class="panel-group" id="grupo-lateral">
   <div class="panel panel-default" id="panel-lateral">
     <div class="panel-heading" id="modalC">
@@ -124,7 +126,6 @@ function CasoSelet11($value)
  </div>
  </div>
     </div>
-
 
 @include('formularios.agredual')
 @include('formularios.agrecamptable')
