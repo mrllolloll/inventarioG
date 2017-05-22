@@ -86,8 +86,8 @@ function CasoSelet11($value)
               <form action="'.$kk.'" method="POST">
                   '.csrf_field().'
                   <div class="btn-group">
-                    <a href="#" type="button" class="btn btn-primary btn-xs " data-toggle="modal" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
-                    <input type="submit" class="btn btn-danger btn-xs" value="Eliminar">
+                    <a href="#" type="button" class="btn btn-blanco btn-xs " data-toggle="modal" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
+                     <input type="submit" class="btn btn-eliminar btn-xs" id="letra-blanca" value="Eliminar">
                   </div>
                   <input type="hidden" name="_method" value="DELETE">
               </form>
