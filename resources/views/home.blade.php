@@ -17,8 +17,8 @@
                   
                   <div class="btn-toolbar pull-right" id="btn-grupo-home">
                       
-                      <div class="btn-group btn-group-sm pull-right">
-                        <button type="button" class="btn btn-blanco btn-xs" data-toggle="modal" id="PDF" data-target="#Alo">
+                      <div class="btn-group btn-group-md pull-right">
+                        <button type="button" class="btn btn-blanco btn-xs" data-toggle="modal" data-target="#Alo">
                           PDF
                         </button> 
                         <button type="button" class="btn btn-blanco btn-xs" id="btnAgrInf" data-toggle="modal" data-target="#agreinfo">

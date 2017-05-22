@@ -67,7 +67,7 @@ function CasoSelet11($value)
       <div class="panel-body panel-lateral" id="accordion">
         <div class="panel-heading" id="panel">
           <h4 class="panel-title" >
-            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'" id="modal" class="nombre-tablas">
+            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'" id="modalLateral" class="nombre-tablas">
 
               '.$i[$i1].'
                <span class="caret pull-right" style="margin-top: 5px"></span>
@@ -92,8 +92,8 @@ function CasoSelet11($value)
               <form action="'.$kk.'" method="POST">
                   '.csrf_field().'
                   <div class="btn-group">
-                    <a href="#" type="button" class="btn btn-blanco btn-xs " data-toggle="modal" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
-                     <input type="submit" class="btn btn-eliminar btn-xs" id="letra-blanca" value="Eliminar">
+                    <a href="#" type="button" class="btn btn-blanco btn-xs nombre-tablas" data-toggle="modal" id="modalLateral1" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
+                     <input type="submit" class="btn btn-eliminar btn-xs" id="modalLateral" value="Eliminar">
                   </div>
                   <input type="hidden" name="_method" value="DELETE">
               </form>
@@ -106,7 +106,7 @@ function CasoSelet11($value)
                   <form action="'.$kk.'" method="POST">
                   '.csrf_field().'
                   <input type="hidden" name="_method" value="DELETE">
-                  <input type="submit" class="btn btn-eliminar btn-xs" id="letra-blanca" value="Eliminar">
+                  <input type="submit" class="btn btn-eliminar btn-xs" id="modalLateral" value="Eliminar">
              </form>
             </tr>
             </table>';

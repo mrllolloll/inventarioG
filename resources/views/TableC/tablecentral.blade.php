@@ -97,7 +97,7 @@ $.extend($.expr[":"],
         <div class='btn-group'>
         <a href='/camp/".$lol->id."/edit' class='btn btn-blanco btn-xs' id='margenBtnFront'>Editar</a>
             <input type='hidden' name='_method' value='DELETE'>
-            <input type='submit' class='btn btn-danger btn-xs' id='margenBtnFront' value='Borrar'  style='width:68px;'>
+            <input type='submit' class='btn btn-danger btn-xs' id='margenBtnFront1' value='Borrar'  style=''>
         </form>
         </div>
        </td>
