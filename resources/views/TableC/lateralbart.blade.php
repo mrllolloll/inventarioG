@@ -19,15 +19,16 @@ function CasoSelet11($value)
     <div class="panel-heading" id="modalC">
       
       <h4 class="panel-title">
+       <br>
        <center> 
          <button type="button" class="btn btn-blanco btn-sm btn-agregarC"  id="agregarC" data-toggle="modal" data-target="#AgreCamp1">
          Agregar Campos
         </button>
 
         </center>
+        
       </h4>
-    </div>
-  </div>
+  
 
 
 <style media="screen">
@@ -43,8 +44,8 @@ function CasoSelet11($value)
     <div class="panel-heading" role="tab" id="menu-lateral">
       <h5 class="tituloCampos-lateral pull"><center>Titulos de Campos</center></h5>
      
-   
- 
+    </div>
+  </div>
 
   
   <?php
@@ -117,6 +118,8 @@ function CasoSelet11($value)
   }
   $i1=0;
 ?>
+  
+
     </div>
 </div>
  </div>

@@ -175,7 +175,7 @@
 
 .nombre-tablas{
 	font-size: 16px; 
-	font-weight:500
+	font-weight:500;
 }
 
 .btn .btn-agregarC{
@@ -185,6 +185,8 @@
 }
 #agregarC{
 	margin-top:  20px;
+	margin-bottom: 20px;
+
 }
 
 #btn-grupo-home{
@@ -304,10 +306,88 @@
 }
 #agregarC{
 	margin-top:  20px;
-	width: 280px; 
+	width: 150px; 
 	display:block;
     border-radius: 5%;
-    margin-bottom: 35px
+    margin-bottom: 35px;
+    font-family: Roboto;
+    font-style: bold;
+    font-size: 10px;
+
+
+}
+
+
+#brand1{
+	padding-bottom: 40px;
+	margin-left: -120px;
+}	
+
+
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 20px;
+	margin-left: : -500px;
+
+}
+
+#pos-brand{
+	margin-right: -120px;
+}
+#PDF{
+	border-right: 1px; 
+	border-left: 0px; 
+	border-bottom: 0px; 
+	border-top: 0px; 
+	border-style: solid; 
+	border-color: #9E9E9E;
+	padding-bottom: 7px;
+}
+.panel-central{
+	margin-top: 20px
+}
+
+}
+
+@media screen and (min-width: 1440px){
+
+.contenedor-lateral{
+	margin-left: -223px; 
+	margin-top: -20px;
+	position: absolute;
+	left: auto;
+	float: left;
+}
+	#grupo-lateral{
+	overflow-y: scroll; 
+	height: 1050px;  
+	width: 400px;
+	background-color: #b71c1c;
+}
+
+#tabla-home{
+	margin-left: 200px;
+	width: 1050px;
+}
+
+.btn .btn-agregarC{
+	margin-bottom: 20px; 
+	margin-left: -6px;
+	width: 100px;
+
+}
+#agregarC{
+	margin-top:  20px;
+	width: 170px; 
+	display:block;
+    border-radius: 5%;
+    margin-bottom: 35px;
+    font-family: Roboto;
+    font-style: bold;
+    font-size: 12px;
+
 
 }
 
@@ -348,7 +428,6 @@
 
 
 
-
 @media screen and (min-width: 1680px){
 
 .contenedor-lateral{
@@ -377,10 +456,14 @@
 }
 #agregarC{
 	margin-top:  20px;
-	width: 280px; 
+	width: 190px; 
 	display:block;
     border-radius: 5%;
-    margin-bottom: 35px
+    margin-bottom: 35px;
+    font-family: Roboto;
+    font-style: bold;
+    font-size: 14px;
+
 
 }
 

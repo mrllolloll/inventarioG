@@ -34,7 +34,7 @@ $.extend($.expr[":"],
 });
 </script>
 
-<section class="table-responsive col-xs-5 col-sm-10 col-md-12" >
+<section class="table-responsive col-xs-5 col-sm-12 col-md-12" >
   <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))
     <thead>
