@@ -5,10 +5,29 @@
 #b{
 	color: #000000;
 }
+#contenedor-login{
+	margin-top: 90px;
+	width:800px;
+	
+	margin-left: 170px;
+}
+#contenedor-login1{
+	height: 300px;
+}
+#leyenda-login{
+	font-size: 15px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 25px
+}
+
 #login{
 	color: #ffffff;
 	background-color:#c40909;
 	font-size: 20px;
+	margin-left: : -500px;
+
 }
 #nav{
 	color: #ffffff;
@@ -333,6 +352,30 @@
 	width: 100px;
 
 }
+#contenedor-login{
+	margin-top: 110px;
+	width:700px;
+	
+	margin-left: 240px;
+}
+#contenedor-login1{
+	height: 300px;
+}
+#leyenda-login{
+	font-size: 13px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 22px
+}
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 60px;
+	margin-left: : -500px;
+
+}
 #agregarC{
 	margin-top:  20px;
 	width: 150px; 
@@ -399,6 +442,31 @@
 	height: 803px; 
 	width: 400px;
 	
+}
+
+#contenedor-login{
+	margin-top: 110px;
+	width:800px;
+	
+	margin-left: 170px;
+}
+#contenedor-login1{
+	height: 300px;
+}
+#leyenda-login{
+	font-size: 15px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 25px
+}
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 60px;
+	margin-left: : -500px;
+
 }
 
 #tabla-home{
@@ -503,6 +571,30 @@
 
 
 }
+#contenedor-login{
+	margin-top: 110px;
+	width:800px;
+	
+	margin-left: 170px;
+}
+#contenedor-login1{
+	height: 300px;
+}
+#leyenda-login{
+	font-size: 20px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 30px
+}
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 60px;
+	margin-left: : -500px;
+
+}
 
 
 #brand1{
@@ -557,6 +649,31 @@
 .tituloCampos-lateral{
 	font-weight: 900;
 	font-size: 20px;
+
+}
+
+#contenedor-login{
+	margin-top: 110px;
+	width:800px;
+	
+	margin-left: 120px;
+}
+#contenedor-login1{
+	height: 300px;
+}
+#leyenda-login{
+	font-size: 25px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 40px
+}
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 60px;
+	margin-left: : -500px;
 
 }
 
@@ -718,6 +835,30 @@
 	width: 854px;
 	
 }
+#contenedor-login{
+	margin-top: 90px;
+	width:870px;
+	
+	margin-left: -60px;
+}
+#contenedor-login1{
+	height: 150px;
+}
+#leyenda-login{
+	font-size: 13px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 25px
+}
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 20px;
+	margin-left: : -500px;
+
+}
 
 #tabla-home{
 	margin-left: -70px;
@@ -793,6 +934,31 @@
 	height:500px;  
 	width: 640px;
 	
+}
+
+#contenedor-login{
+	margin-top: 90px;
+	width:620px;
+	
+	margin-left: 5px;
+}
+#contenedor-login1{
+	height: 150px;
+}
+#leyenda-login{
+	font-size: 10px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 15px
+}
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 15px;
+	margin-left: : -500px;
+
 }
 
 #tabla-home{
@@ -895,6 +1061,31 @@
     font-size: 16px;
     font-weight: 900;
 
+
+}
+
+#contenedor-login{
+	margin-top: 150px;
+	width:1200px;
+	
+	margin-left: -30px;
+}
+#contenedor-login1{
+	height: 300px;
+}
+#leyenda-login{
+	font-size: 30px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 60px
+}
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 60px;
+	margin-left: : -500px;
 
 }
 
@@ -1149,7 +1340,22 @@
 	margin-top: 35px;
 }	
 
-
+#contenedor-login{
+	margin-top: 300px;
+	width:1800px;
+	
+	margin-left: -600px;
+}
+#contenedor-login1{
+	height: 800px;
+}
+#leyenda-login{
+	font-size: 50px;
+}
+.login-input{
+	margin-top: 20px;
+	height: 90px
+}
 
 #login{
 	color: #ffffff;
