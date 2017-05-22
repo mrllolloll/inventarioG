@@ -552,7 +552,12 @@
 }
 #grupo-lateral{
 	height: 1060px;  
-	width: 430px;	
+	width: 480px;	
+}
+.tituloCampos-lateral{
+	font-weight: 900;
+	font-size: 20px;
+
 }
 
 #tabla-home{
@@ -1149,7 +1154,7 @@
 #login{
 	color: #ffffff;
 	background-color:#c40909;
-	font-size: 40px;
+	font-size: 60px;
 	margin-left: : -500px;
 
 }
@@ -1203,10 +1208,16 @@
 	color:white; 
 	font-size: 50px
 }
+
+#modalLateralE{
+	background-color:#820000; 
+	color:white; 
+	font-size: 25px
+}
 #modalLateral1{
 	background-color: #FFFFFF; 
 	color:#000000; 
-	font-size: 45px
+	font-size: 25px
 }
 
 #btn-grupo-home{
@@ -1234,4 +1245,9 @@
 	width:143px;
 	font-size: 30px
 }
+
+#seccionEditar{
+	margin-right: 1000px
+}
+
 }

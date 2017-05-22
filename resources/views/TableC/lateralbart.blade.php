@@ -93,7 +93,7 @@ function CasoSelet11($value)
                   '.csrf_field().'
                   <div class="btn-group">
                     <a href="#" type="button" class="btn btn-blanco btn-xs nombre-tablas" data-toggle="modal" id="modalLateral1" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
-                     <input type="submit" class="btn btn-eliminar btn-xs" id="modalLateral" value="Eliminar">
+                     <input type="submit" class="btn btn-eliminar btn-xs" id="modalLateralE" value="Eliminar">
                   </div>
                   <input type="hidden" name="_method" value="DELETE">
               </form>
@@ -106,7 +106,7 @@ function CasoSelet11($value)
                   <form action="'.$kk.'" method="POST">
                   '.csrf_field().'
                   <input type="hidden" name="_method" value="DELETE">
-                  <input type="submit" class="btn btn-eliminar btn-xs" id="modalLateral" value="Eliminar">
+                  <input type="submit" class="btn btn-eliminar btn-xs" id="modalLateralE" value="Eliminar">
              </form>
             </tr>
             </table>';
