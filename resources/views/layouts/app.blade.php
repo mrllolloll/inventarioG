@@ -42,7 +42,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top navbar-margen" id="fondoRojo">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-margen" id="fondoRojo">
             <div class="container">
                 <div class="navbar-header">
 

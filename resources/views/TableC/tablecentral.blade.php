@@ -34,7 +34,7 @@ $.extend($.expr[":"],
 });
 </script>
 
-<section class="table-responsive col-xs-5 col-sm-12 col-md-12" >
+<section class="table-responsive col-xs-5 col-sm-12 col-md-12">
   <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))
     <thead>
@@ -76,8 +76,12 @@ $.extend($.expr[":"],
           if ($i0[$i2]!="Dual") {
             echo "<td>".$lol->$mostar."</td>";
           }else {
-            $busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first();
-            echo "<td>".$busc->info."</td>";
+            
+           if ($busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first()) {
+                echo "<td>".$busc->info."</td>";
+            }else {
+              echo "<td>nulo</td>";
+            }
           }
           $i2++;
           $i1++;

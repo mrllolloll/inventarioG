@@ -198,9 +198,9 @@
 }
 
 .contenedor-lateral{
-	
+	position: fixed;
 	margin-left: -73px; 
-	margin-top: -29px;
+	margin-top: 50px;
 	left: auto;
 	float: left;
 	background-color: #b71c1c;
@@ -211,7 +211,7 @@
 
 #grupo-lateral{
 	
-	height: 638px;  
+	height: 623px;  
 	width: 250px;
 	background-color: #b71c1c;
 
@@ -223,7 +223,9 @@
 }
 
 #tabla-home{
-
+	margin-top: 60px;
+	margin-left: 200px;
+	width: 87%;
 }
 
 #pos-brand{
@@ -288,7 +290,7 @@
 
 .contenedor-lateral{
 	margin-left: -142px; 
-	margin-top: -20px;
+	margin-top: 50px;
 	position: absolute;
 	left: auto;
 	float: left;
@@ -365,8 +367,9 @@
 @media screen and (min-width: 1440px){
 
 .contenedor-lateral{
+
 	margin-left: -235px; 
-	margin-top: -20px;
+	margin-top: 57px;
 	position: absolute;
 	left: auto;
 	float: left;
@@ -447,7 +450,7 @@
 
 .contenedor-lateral{
 	margin-left: -284px; 
-	margin-top: -20px;
+	margin-top: 57px;
 	position: absolute;
 	left: auto;
 	float: left;
@@ -616,8 +619,9 @@
 }
 
 #tabla-home{
-	
+	margin-left: -70px;
 	margin-top: 510px;
+	width: 850px
 	
 }
 
@@ -691,8 +695,10 @@
 }
 
 #tabla-home{
-	
+	margin-left: -20px;
 	margin-top: 510px;
+	width: 640px
+	
 	
 }
 

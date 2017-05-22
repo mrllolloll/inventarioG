@@ -15,7 +15,7 @@ function CasoSelet11($value)
 
 
 
-<div class="contenedor-lateral" style="margin-bottom: 0px;">
+<div class="contenedor-lateral">
 <div class="panel-group" id="grupo-lateral">
   <div class="panel panel-default" id="panel-lateral">
     <div class="panel-heading" id="modalC">

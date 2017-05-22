@@ -9,7 +9,7 @@
           @include('TableC.lateralbart')
         @endif
       </aside>
-        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10" id="tabla-home">
+        <div class="col-xs-10 col-sm-10 col-md-11 col-lg-10" id="tabla-home">
             <div class="panel panel-default panel-central"x>
 
                 
