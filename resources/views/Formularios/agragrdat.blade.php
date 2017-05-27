@@ -33,8 +33,8 @@ function CasoSeletr($value)
       if ($dates!="false") {
           if ($dates=="DATE") {
             echo '
-            <section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">
-            <input required type="text" id="id'.$fatamano.'"   name="'.$i1.'" class="form-control">
+            <section class="form-group"><label for="id'.$fatamano.'" class="col-md-4"  id="FontsModal">Ingresar '.$fatamanor.' :</label><section Class="col-md-8" id="secModal">
+            <input required type="text" id="id'.$fatamano.'"   name="'.$i1.'" class="form-control inptModal">
             </section></section>
             <script type="text/javascript">
             $(document).ready(function() {
@@ -46,17 +46,17 @@ function CasoSeletr($value)
               $dualar="tab_";
               $dualar.=$fatamano;
               $data = DB::table($dualar)->get();
-              echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">';
-              echo '<select id="id'.$fatamano.'" name="'.$i1.'" class="form-control" required>';
-              echo '<option value="">Seleccionar una opcion</option>';
+              echo '<section class="form-group"><label for="id'.$fatamano.'" id="FontsModal" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">';
+              echo '<select id="id'.$fatamano.'" name="'.$i1.'" class="form-control cmbModal" required>';
+              echo '<option value="" id="FontsModal">Seleccionar una opcion</option>';
               foreach ($data as $datas) {
-                echo '<option value="'.$datas->id.'">'.$datas->info.'</option>';
+                echo '<option  id="FontsModal" value="'.$datas->id.'">'.$datas->info.'</option>';
               }
               echo '</select>';
               echo '</section>
                     </section>';
           }else {
-            echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control" required></section></section>';
+            echo '<section class="form-group"><label id="FontsModal" for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control inptModal" required></section></section>';
           }
       }
       $i1++;
@@ -70,7 +70,7 @@ function CasoSeletr($value)
   </section>
   <section class="form-group">
     <section class="col-md-2 col-md-offset-4">
-      <button class="btn btn-blanco-modal">
+      <button class="btn btn-blanco-modal" id="FontsModal">
         Registrar
       </button>
     </section>

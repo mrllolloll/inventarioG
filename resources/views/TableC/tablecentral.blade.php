@@ -40,7 +40,7 @@ $.extend($.expr[":"],
     <thead>
       <tr>
         <th>
-          <label for="kwd_search">Buscar: </label><input type="text" id="kwd_search" value=""/>
+          <label for="kwd_search" id="FontsModal">Buscar: </label><input type="text" id="kwd_search" value=""/>
         </th>
       </tr>
       <tr>
