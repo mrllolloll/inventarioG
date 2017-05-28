@@ -10,6 +10,22 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    
+   
+   <link rel="stylesheet" type="text/css" href="/css/roboto.css">
+    
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Bootstrap Material Design -->
+      <link href="/css/bootstrap-material-design.css" rel="stylesheet">
+      <link href="/css/ripples.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- Styles -->
+    <link href="/css/app.css" rel="stylesheet">
+
+
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -19,10 +35,14 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+   
+   
+
 </head>
+
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top" id="fondoRojo">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-margen" id="nav">
             <div class="container">
                 <div class="navbar-header">
 
@@ -47,7 +67,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" id="pos-brand">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li  ><a href="{{ url('/login') }}"  id="login" class="login">Login</a></li>
@@ -77,7 +97,33 @@
             </div>
         </nav>
         <!-- Scripts -->
-        <script src="/js/app.js"></script>
+        <script src="/js/jquery-1.10.2.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/ripples.min.js"></script>
+        <script src="/js/material.min.js"></script>
+        <script>
+          $(function () {
+            $.material.init();
+            $(".shor").noUiSlider({
+              start: 40,
+              connect: "lower",
+              range: {
+                min: 0,
+                max: 100
+              }
+            });
+
+            $(".svert").noUiSlider({
+              orientation: "vertical",
+              start: 40,
+              connect: "lower",
+              range: {
+                min: 0,
+                max: 100
+              }
+            });
+          });
+        </script>
         @yield('content')
     </div>
 

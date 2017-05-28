@@ -34,7 +34,7 @@ $.extend($.expr[":"],
 });
 </script>
 
-<section class="table-responsive">
+<section class="table-responsive col-xs-5 col-sm-12 col-md-12">
   <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))
     <thead>
@@ -76,8 +76,12 @@ $.extend($.expr[":"],
           if ($i0[$i2]!="Dual") {
             echo "<td>".$lol->$mostar."</td>";
           }else {
-            $busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first();
-            echo "<td>".$busc->info."</td>";
+            
+           if ($busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first()) {
+                echo "<td>".$busc->info."</td>";
+            }else {
+              echo "<td>nulo</td>";
+            }
           }
           $i2++;
           $i1++;
@@ -91,9 +95,9 @@ $.extend($.expr[":"],
        <form  action='".$kk."' method='POST'>
           ".csrf_field()."
         <div class='btn-group'>
-        <a href='/camp/".$lol->id."/edit' class='btn btn-primary btn-xs'>Editar</a>
+        <a href='/camp/".$lol->id."/edit' class='btn btn-blanco btn-xs' id='margenBtnFront'>Editar</a>
             <input type='hidden' name='_method' value='DELETE'>
-            <input type='submit' class='btn btn-danger btn-xs' value='Borrar'>
+            <input type='submit' class='btn btn-danger btn-xs' id='margenBtnFront1' value='Borrar'  style=''>
         </form>
         </div>
        </td>
