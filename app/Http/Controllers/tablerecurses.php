@@ -165,10 +165,13 @@ class tablerecurses extends Controller
   * @param  int  $id
   * @return \Illuminate\Http\Response
   */
-  public function destroy($id)
+  public function destroy(Request $request,$id)
   {
     camptable::destroy($id);
     $results=DB::statement('alter table table_centrals drop column '.$_GET['yolo']);
+    if ($request->bool=="true") {
+        $results=DB::statement('DROP TABLE tab_'.$_GET['yolo']);
+    }
     return back();
   }
 }

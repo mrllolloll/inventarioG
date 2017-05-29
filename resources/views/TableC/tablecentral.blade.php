@@ -7,6 +7,9 @@ function CasoSelet($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 } ?>
 <script>
+function ondelet(value){
+  $("#FormDelete").attr('action',value);
+}
 $(document).ready(function(){
   // Write on keyup event of keyword input element
   $("#kwd_search").keyup(function(){
@@ -76,11 +79,11 @@ $.extend($.expr[":"],
           if ($i0[$i2]!="Dual") {
             echo "<td>".$lol->$mostar."</td>";
           }else {
-            
+
            if ($busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first()) {
                 echo "<td>".$busc->info."</td>";
             }else {
-              echo "<td>nulo</td>";
+              echo "<td>N/A</td>";
             }
           }
           $i2++;
@@ -92,13 +95,9 @@ $.extend($.expr[":"],
 
        echo"
        <td>
-       <form  action='".$kk."' method='POST'>
-          ".csrf_field()."
         <div class='btn-group'>
         <a href='/camp/".$lol->id."/edit' class='btn btn-blanco btn-xs' id='margenBtnFront'>Editar</a>
-            <input type='hidden' name='_method' value='DELETE'>
-            <input type='submit' class='btn btn-danger btn-xs' id='margenBtnFront1' value='Borrar'  style=''>
-        </form>
+        <a type='button' class='btn btn-danger btn-xs' id='margenBtnFront1' data-toggle='modal' data-target='#borr11' onclick='ondelet( \"".$kk."\")'>Borrar</a>
         </div>
        </td>
             ";
