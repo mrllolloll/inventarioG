@@ -5,14 +5,14 @@
   {{ csrf_field() }}
   <input type="hidden" name="tool" value="" id="tool">
   <section class="form-group">
-    <label for="dat" class="col-md-4" id="FontsModal">Ingresar datos:</label>
+    <label for="dat" class="col-md-4">Ingresar datos:</label>
     <section Class="col-md-8">
-      <input id="dat" type="text" name="datos1" class="form-control inptModal" required>
+      <input id="dat" type="text" name="datos1" class="form-control" required>
     </section>
   </section>';
   <section class="form-group">
     <section class="col-md-2 col-md-offset-4">
-      <button class="btn btn-blanco-modal" id="FontsModal">
+      <button class="btn btn-blanco-modal">
         Registrar
       </button>
     </section>

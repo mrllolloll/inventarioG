@@ -28,8 +28,8 @@ function CasoSeletr3($value)
       $dates=$o->nombclum;
       if ($dates!="false") {
         if ($dates=="DATE") {
-          echo '<section" class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">
-          <input required type="text" id="il'.$fatamano.'"  id="FontsModal"  name="'.$i1.'" class="form-control inptModal">
+          echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">
+          <input required type="text" id="il'.$fatamano.'"  name="'.$i1.'" class="form-control">
           </section></section>
           <script type="text/javascript">
           $(document).ready(function() {
@@ -42,21 +42,21 @@ function CasoSeletr3($value)
           $dualar="tab_";
           $dualar.=$fatamano;
           $data = DB::table($dualar)->get();
-          echo '<section  class="form-group"><label  id="FontsModal" for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">';
-          echo '<select id="id'.$fatamano.'" name="'.$i1.'" class="form-control cmbModal"  required>';
-          echo '<option value="" id="FontsModal">Seleccionar una opcion</option>';
+          echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">';
+          echo '<select id="id'.$fatamano.'" name="'.$i1.'" class="form-control" required>';
+          echo '<option value="">Seleccionar una opcion</option>';
           foreach ($data as $datas) {
             if ($camper->$fatamano == $datas->id ) {
-                echo '<option value="'.$datas->id.'" id="FontsModal" selected>'.$datas->info.'</option>';
+                echo '<option value="'.$datas->id.'" selected>'.$datas->info.'</option>';
             }else {
-                echo '<option value="'.$datas->id.'" id="FontsModal">'.$datas->info.'</option>';
+                echo '<option value="'.$datas->id.'">'.$datas->info.'</option>';
             }
           }
           echo '</select>';
           echo '</section>
                 </section>';
         }else{
-        echo '<section class="form-group"><label  id="FontsModal" for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" value="'.$camper->$fatamano.'" class="form-control inptModal"></section></section>';
+        echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" value="'.$camper->$fatamano.'" class="form-control"></section></section>';
       }
     }
 
@@ -71,7 +71,7 @@ function CasoSeletr3($value)
   </section>
   <section class="form-group">
     <section class="col-md-2 col-md-offset-4">
-      <button class="btn btn-blanco-modal"  id="FontsModal">
+      <button class="btn btn-blanco-modal">
         Registrar
       </button>
     </section>

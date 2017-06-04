@@ -87,7 +87,7 @@ function CasoSelet11($value)
             <table>
             ';
             foreach ($data1 as $h) {
-                echo "<p class='nombre-tablas'>".$h->info."</p>";
+                echo $h->info;
                 echo "<br>";
               }
             echo'
