@@ -35,7 +35,8 @@ $.extend($.expr[":"],
 </script>
 
 <section class="table-responsive col-xs-5 col-sm-12 col-md-12">
-  <table id="my-table" class="table table-striped table-hover">
+  <!--<table id="my-table" class="table table-striped table-hover" style="background-image: url('css/logo_seniat.png');">-->
+  <table id="my-table" class="table fondoTblCentral" id="">
     @if(isset($titutable))
     <thead>
       <tr>
