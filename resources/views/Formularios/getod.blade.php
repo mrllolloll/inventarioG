@@ -10,10 +10,10 @@ function CasoSeletcx($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 }?>
 
-<section class="table-responsive" id="secModal">
+<section class="table-responsive">
 <form class="form-horizontal" role="form" action="{{url('/pdf')}}" method="GET">
 {{ csrf_field() }}
-<center id="FontsModal">
+<center>
 Buscar: 
 @if(isset($titutable))
     @if(isset($table))
@@ -36,7 +36,7 @@ Buscar: 
       <br>
       <section class="form-group">
         <section class="col-md-2 col-md-offset-4">
-          <button class="btn btn-blanco-modal" id="FontsModal">
+          <button class="btn btn-blanco-modal">
             Registrar
           </button>
         </section>
