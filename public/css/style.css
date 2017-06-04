@@ -52,6 +52,12 @@
 	width:140px; 
 }
 
+.CustomBrand{
+	background-color: white; 
+	padding-top: 20px; 
+	margin-top: -22px;
+}
+
 #modal{
 	background-color: #c40909; 
 	color:white; 
@@ -322,6 +328,17 @@
 }
 
 
+/*TABLA CENTRAL*/
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 950px;
+	background-position: center;
+}
+
+
+
+
 @media screen and (min-width: 1366px){
 
 .contenedor-lateral{
@@ -393,8 +410,15 @@
 
 #brand1{
 	padding-bottom: 40px;
-	margin-left: -120px;
+	margin-left: -100px;
 }	
+
+.CustomBrand{
+	background-color: white; 
+	padding-top: 20px; 
+
+	margin-top: -22px;
+}
 
 
 
@@ -420,6 +444,13 @@
 }
 .panel-central{
 	margin-top: 20px
+}
+
+/*TABLA CENTRAL*/
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 970px;
 }
 
 }
@@ -526,6 +557,68 @@
 	margin-top: 20px
 }
 
+/*TABLA CENTRAL*/
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 1050px;
+	background-position: center;
+}
+
+
+/*Modales********************************************************************/
+#Modals{
+	height: 700px;
+	width: 1100px;
+	margin-left: -230px;
+	margin-top:50px;
+}
+
+#conModal{
+	height: 570px;
+	
+}
+
+#secModal{
+	margin-bottom: 80px
+}
+
+#FontsModal{
+	font-size: 15px;
+}
+.cmbModal{
+	font-size: 15px;
+	height: 50px;
+}
+.inptModal{
+	font-size: 15px;
+	height: 40px;
+}
+
+.inptModal:-webkit-input-placeholder{
+   	font-size: 50px;
+}
+.inptModal:-moz-input-placeholder{
+   	font-size: 50px;
+}
+
+#modal{
+	background-color: #c40909; 
+	color:white; 
+	font-size: 	15px
+}
+
+
+.inputFecha{
+	width: 30px;
+	height: 30px;
+}
+
+#cerrarHeadModal{
+	height: 20px;
+	width: 20px;
+}
+
 }
 
 
@@ -628,6 +721,67 @@
 	margin-top: 20px
 }
 
+/*TABLA CENTRAL*/
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 1100px;
+	background-position: center;
+}
+
+/*Modales********************************************************************/
+#Modals{
+	height: 700px;
+	width: 1100px;
+	margin-left: -200px;
+	margin-top:50px;
+}
+
+#conModal{
+	height: 570px;
+	
+}
+
+#secModal{
+	margin-bottom: 80px
+}
+
+#FontsModal{
+	font-size: 20px;
+}
+.cmbModal{
+	font-size: 20px;
+	height: 50px;
+}
+.inptModal{
+	font-size: 20px;
+	height: 40px;
+}
+
+.inptModal:-webkit-input-placeholder{
+   	font-size: 50px;
+}
+.inptModal:-moz-input-placeholder{
+   	font-size: 50px;
+}
+
+#modal{
+	background-color: #c40909; 
+	color:white; 
+	font-size: 20px
+}
+
+
+.inputFecha{
+	width: 30px;
+	height: 30px;
+}
+
+#cerrarHeadModal{
+	height: 20px;
+	width: 20px;
+}
+
 }
 
 @media screen and (min-width: 1920px){
@@ -669,13 +823,7 @@
 	height: 40px
 }
 
-#login{
-	color: #ffffff;
-	background-color:#c40909;
-	font-size: 60px;
-	margin-left: : -500px;
 
-}
 
 #tabla-home{
 	margin-left: 90px;
@@ -702,24 +850,10 @@
 }
 
 
-#brand1{
-	padding-bottom: 40px;
-	margin-left: -370px;
-}	
 
 
 
-#login{
-	color: #ffffff;
-	background-color:#c40909;
-	font-size: 20px;
-	margin-left: : -500px;
 
-}
-
-#pos-brand{
-	margin-right: -360px;
-}
 #PDF{
 	border-right: 1px; 
 	border-left: 0px; 
@@ -731,6 +865,85 @@
 }
 .panel-central{
 	margin-top: 20px
+}
+
+/*TABLA CENTRAL*/
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 1300px;
+	background-position: center;
+}
+
+/*BRAND*/
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 60px;
+	margin-left: : -500px;
+
+}
+
+#brand1{
+	padding-bottom: 40px;
+	margin-left: -370px;
+}	
+#pos-brand{
+	margin-right: -360px;
+}
+
+/*Modales********************************************************************/
+#Modals{
+	height: 800px;
+	width: 1400px;
+	margin-left: -350px;
+	margin-top:100px;
+}
+
+#conModal{
+	height: 550px;
+	
+}
+
+#secModal{
+	margin-bottom: 120px
+}
+
+#FontsModal{
+	font-size: 27px;
+}
+.cmbModal{
+	font-size: 27px;
+	height: 60px;
+}
+.inptModal{
+	font-size: 27px;
+	height: 40px;
+}
+
+.inptModal:-webkit-input-placeholder{
+   	font-size: 50px;
+}
+.inptModal:-moz-input-placeholder{
+   	font-size: 50px;
+}
+
+#modal{
+	background-color: #c40909; 
+	color:white; 
+	font-size: 27px
+}
+
+
+.inputFecha{
+	width: 40px;
+	height: 40px;
+}
+
+#cerrarHeadModal{
+	height: 30px;
+	width: 30px;
 }
 
 }
@@ -888,6 +1101,12 @@
 	
 }	
 
+.CustomBrand{
+	background-color: white; 
+	height: 63px;
+}
+
+
 
 
 #login{
@@ -913,6 +1132,13 @@
 }
 .panel-central{
 	margin-top: 20px
+}
+
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 650px;
+	background-position: center;
 }
 	
 }
@@ -989,6 +1215,11 @@
 	padding-bottom: 40px;
 	
 }	
+.CustomBrand{
+	background-color: white; 
+	height: 63px;
+}
+
 
 
 
@@ -1017,6 +1248,14 @@
 	margin-top: 20px
 }
 	
+/*TABLA CENTRAL*/
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 650px;
+	background-position: center;
+}
+
 }
 
 
@@ -1090,27 +1329,8 @@
 }
 
 
-#brand1{
-	padding-bottom: 40px;
-	margin-left: -670px;
-	margin-top: 10px;
-}	
 
 
-
-#login{
-	color: #ffffff;
-	background-color:#c40909;
-	font-size: 20px;
-	margin-left: : -500px;
-
-}
-
-#pos-brand{
-	margin-top: 10px;
-	margin-right: -670px;
-	font-size: 20px;
-}
 #PDF{
 	border-right: 1px; 
 	border-left: 0px; 
@@ -1165,10 +1385,104 @@
 	font-size: 25px;
 
 }
+
+/*TABLA CENTRAL*/
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 1700px;
+	background-position: center;
+}
+
+/*BRAND*/
+
+#brand1{
+	padding-bottom: 40px;
+	margin-left: -670px;
+	margin-top: 10px;
+}	
+
+.CustomBrand{
+	background-color: white; 
+	padding-top: 20px; 
+	padding-bottom: 10px;
+	margin-top: -25px
+}
+
+#pos-brand{
+	margin-top: 10px;
+	margin-right: -670px;
+	font-size: 20px;
 }
 
 
 
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 20px;
+	margin-left: : -500px;
+
+}
+
+
+
+/*Modales********************************************************************/
+#Modals{
+	height: 1000px;
+	width: 1800px;
+	margin-left: -600px;
+	margin-top:200px;
+}
+
+#conModal{
+	height: 800px;
+	
+}
+
+#secModal{
+	margin-bottom: 100px
+}
+
+#FontsModal{
+	font-size: 35px;
+}
+.cmbModal{
+	font-size: 35px;
+	height: 60px;
+}
+.inptModal{
+	font-size: 35px;
+	height: 60px;
+}
+
+.inptModal:-webkit-input-placeholder{
+   	font-size: 50px;
+}
+.inptModal:-moz-input-placeholder{
+   	font-size: 50px;
+}
+
+#modal{
+	background-color: #c40909; 
+	color:white; 
+	font-size: 40px
+}
+
+
+.inputFecha{
+	width: 40px;
+	height: 40px;
+}
+
+#cerrarHeadModal{
+	height: 40px;
+	width: 40px;
+}
+}
+
+
+/*Este por ahora está inutilizable*/
 @media screen and (min-width: 2800px){
 
 .contenedor-lateral{
@@ -1334,11 +1648,6 @@
 }
 
 
-#brand1{
-	padding-bottom: 40px;
-	margin-left: -1900px;
-	margin-top: 35px;
-}	
 
 #contenedor-login{
 	margin-top: 300px;
@@ -1357,19 +1666,7 @@
 	height: 90px
 }
 
-#login{
-	color: #ffffff;
-	background-color:#c40909;
-	font-size: 60px;
-	margin-left: : -500px;
 
-}
-
-#pos-brand{
-	margin-top: 35px;
-	margin-right: -1900px;
-	font-size: 40px;
-}
 #PDF{
 	border-right: 1px; 
 	border-left: 0px; 
@@ -1455,5 +1752,98 @@
 #seccionEditar{
 	margin-right: 1000px
 }
+
+/*TABLA CENTRAL*/
+.fondoTblCentral{
+	background-image: url("logo_seniat.png");
+	background-repeat: no-repeat; 
+	background-size: 3800px;
+	background-position: center;
+}
+
+/*BRAND*/
+
+#login{
+	color: #ffffff;
+	background-color:#c40909;
+	font-size: 60px;
+	margin-left: : -500px;
+
+}
+
+#pos-brand{
+	margin-top: 35px;
+	margin-right: -1900px;
+	font-size: 40px;
+}
+
+#brand1{
+	padding-bottom: 40px;
+	margin-left: -1900px;
+	margin-top: 35px;
+}	
+.CustomBrand{
+	background-color: white; 
+	padding-top: 50px; 
+	padding-bottom: 50px;
+	margin-top: -50px;
+	width: 150px;
+}
+
+
+/*Modales************************************************************************/
+#Modals{
+	height: 1500px;
+	width: 3000px;
+	margin-left: -1000px;
+	margin-top:500px;
+}
+
+#conModal{
+	height: 1200px;;
+	
+}
+
+#secModal{
+	margin-bottom: 300px
+}
+
+#FontsModal{
+	font-size: 60px;
+}
+.cmbModal{
+	font-size: 50px;
+	height: 80px;
+}
+.inptModal{
+	font-size: 50px;
+	height: 80px;
+}
+
+.inptModal:-webkit-input-placeholder{
+   	font-size: 50px;
+}
+.inptModal:-moz-input-placeholder{
+   	font-size: 50px;
+}
+
+#modal{
+	background-color: #c40909; 
+	color:white; 
+	font-size: 40px
+}
+
+
+.inputFecha{
+	width: 40px;
+	height: 40px;
+}
+
+#cerrarHeadModal{
+	height: 40px;
+	width: 40px;
+}
+
+
 
 }
