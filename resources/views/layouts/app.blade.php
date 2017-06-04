@@ -55,9 +55,13 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/home') }}" id="brand1">
-                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" id="brand2"/>
-                    </a>
+                   
+                        <a class="navbar-brand" href="{{ url('/home') }}" id="brand1">
+                            <div class="CustomBrand">
+                                <img alt="" src="{{url('css/seniat.png')}}" class="logo" id="brand2">
+                            </div>
+                        </a>
+                
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
