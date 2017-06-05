@@ -38,7 +38,7 @@ $.extend($.expr[":"],
 </script>
 
 <section class="table-responsive col-xs-5 col-sm-12 col-md-12">
-  <table id="my-table" class="table table-striped table-hover">
+  <table id="my-table" class="table table-hover table fondoTblCentral">
     @if(isset($titutable))
     <thead>
       <tr>
@@ -57,6 +57,7 @@ $.extend($.expr[":"],
       @if(isset($table))
 
       <?php
+
       $i1=0;
       $i2=0;
       foreach ($titutable as $o) {
@@ -69,9 +70,10 @@ $.extend($.expr[":"],
         $i2++;
         $i1++;
       }
-
+     
       $i1=0;
       $i2=0;
+      
       foreach ($table as $lol) {
         echo "<tr>";
         while ($i1 < count($i)) {
