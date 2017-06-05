@@ -13,7 +13,7 @@
       top: -160px;
       right: 0px;
       height: 100px;
-      background-color: #ddd;
+      background-color: #FFFFFF;
       text-align: center;
     }
     header h1{
@@ -62,7 +62,7 @@
       border: 1px solid;
     }
     table{
-      border: 1px solid;
+      border: 0.1px solid;
     }
     header{
       text-align: left;
@@ -85,15 +85,15 @@
 </head>
 <body>
   <header>
-    <img src="images/jk.png" width="150" height="100">
-    <h2>Direccion de informatica</h2>
+    <img src="images/header1.jpg" width="1000" height="52">
+    <img src="css/seniat.png" width="200" height="100">
   </header>
   <footer>
     <table>
       <tr>
         <td>
             <p class="izq">
-              Direccion de informatica
+              Seniat
             </p>
         </td>
         <td>
@@ -105,6 +105,7 @@
     </table>
   </footer>
   <div id="content">
+    <br><br>
     @include('TableC.impta')
   </div>
 </body>

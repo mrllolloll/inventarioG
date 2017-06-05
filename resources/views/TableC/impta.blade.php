@@ -12,9 +12,10 @@ function CasoSelet($value)
     @if(isset($titutable))
     <thead>
       <tr>
-        <th>Identificador</th>
         @foreach($titutable as $n)
+        <?php if ($n->nomtable == array_get($char,$n->nomtable)) { ?>
         <th>{{$n->nomtable}}</th>
+          <?php } ?>
         @endforeach
       </tr>
     </thead>
@@ -24,17 +25,27 @@ function CasoSelet($value)
       <?php
       $i1=0;
       foreach ($titutable as $o) {
+        if ($o->nomtable == array_get($char,$o->nomtable)) {
         $i[$i1]=$o->nomtable;
+        $i0[$i1]=$o->nombclum;
         $i1++;
+        }
       }
       $i1=0;
       foreach ($table as $lol) {
         echo "<tr>";
-        echo "<td>".$lol->id."</td>";
         while ($i1 < count($i)) {
           $mostar=CasoSelet($i[$i1]);
+          if ($i0[$i1]=="Dual") {
+            if ($busc = DB::table('tab_'.$mostar)->where('id',$lol->$mostar )->first()) {
+                 echo "<td>".$busc->info."</td>";
+             }else {
+               echo "<td>N/A</td>";
+             }
+          }else {
           echo "<td>".$lol->$mostar."</td>";
-          $i1++;
+        }
+        $i1++;
         }
         $i1=0;
         echo "</tr>";
