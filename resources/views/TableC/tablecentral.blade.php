@@ -38,7 +38,7 @@ $.extend($.expr[":"],
 </script>
 
 <section class="table-responsive col-xs-5 col-sm-12 col-md-12">
-  <table id="my-table" class="table table-hover table-striped table fondoTblCentral">
+  <table id="my-table" class="table table-hover table fondoTblCentral">
     @if(isset($titutable))
     <thead>
       <tr>
@@ -73,9 +73,17 @@ $.extend($.expr[":"],
      
       $i1=0;
       $i2=0;
-      
+      $f=0;
       foreach ($table as $lol) {
-        echo "<tr>";
+
+        if ($f%2==1) {
+          echo "<tr style='background: rgba(211, 211, 211, 0.3); color:black'>";
+          $f++;
+        }else{
+           echo "<tr>";
+           $f++;
+        }
+       
         while ($i1 < count($i)) {
           $mostar=CasoSelet($i[$i1]);
           if ($i0[$i2]!="Dual") {
@@ -90,6 +98,7 @@ $.extend($.expr[":"],
           }
           $i2++;
           $i1++;
+
         }
         $i1=0;
         $i2=0;
@@ -104,6 +113,7 @@ $.extend($.expr[":"],
        </td>
             ";
         echo "</tr>";
+
       }
       ?>
       @endif

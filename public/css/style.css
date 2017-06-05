@@ -332,7 +332,7 @@
 /*TABLA CENTRAL*/
 .fondoTblCentral{
 	background-image: url("logo_seniat.png");
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	background-size: 950px;
 	background-position: right;
 	background-attachment: fixed;
@@ -1387,6 +1387,7 @@
 /*TABLA CENTRAL*/
 .fondoTblCentral{
 	background-image: url("logo_seniat.png");
+	background-color:  rgba(255, 255, 255, 0.3); 
 	background-repeat: no-repeat; 
 	background-size: 3800px;
 	background-position: right;
