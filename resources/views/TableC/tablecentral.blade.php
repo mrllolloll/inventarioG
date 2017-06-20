@@ -37,8 +37,8 @@ $.extend($.expr[":"],
 });
 </script>
 
-<section class="table-responsive col-xs-5 col-sm-12 col-md-12">
-  <table id="my-table" class="table table-hover table fondoTblCentral">
+<section class="table-responsive col-xs-5 col-sm-12 col-md-12" style="overflow-x: scroll;">
+  <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))
     <thead>
       <tr>
@@ -57,9 +57,9 @@ $.extend($.expr[":"],
       @if(isset($table))
 
       <?php
-
       $i1=0;
       $i2=0;
+      $titulos= array();
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
         if ($o->nombclum=="Dual") {
@@ -67,30 +67,50 @@ $.extend($.expr[":"],
         }else {
           $i0[$i2]=false;
         }
+        
         $i2++;
         $i1++;
+
       }
-     
+      $iz=1;
       $i1=0;
       $i2=0;
-      $f=0;
-      foreach ($table as $lol) {
+      $cps=0;
+      $campos = array('');
+      $campos1 = array('');
+      $consultas=array('');
+      $consultas= array('');
+      
+      $consulta = DB::table('camptables')->where('nombclum', '=','file')->get();
+      
+      
+         
+      foreach ($consulta as $const) {
+        $campos1[]= $const->nomtable;
+        $campos[] = $const->nombclum;
+      }
+     
+      
 
-        if ($f%2==1) {
-          echo "<tr style='background: rgba(211, 211, 211, 0.3); color:black'>";
-          $f++;
-        }else{
-           echo "<tr>";
-           $f++;
-        }
-       
-        while ($i1 < count($i)) {
+      foreach ($table as $lol){
+     
+        echo "<tr>";
+        while ($i1 < count($i)){
           $mostar=CasoSelet($i[$i1]);
           if ($i0[$i2]!="Dual") {
-            echo "<td>".$lol->$mostar."</td>";
-          }else {
-
-           if ($busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first()) {
+              
+              if (substr($lol->$mostar, 18)=="tmp"){
+                 echo "<td><a href='/imagen/".$lol->id."' class='.btn btn-primary btn-xs'>Imagen</a></td>";
+              }else{
+                
+                echo "<td>".$lol->$mostar."</td>";
+               
+              }
+                  
+                        
+          }else{
+          
+          if ($busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first()) {
                 echo "<td>".$busc->info."</td>";
             }else {
               echo "<td>N/A</td>";
@@ -98,7 +118,6 @@ $.extend($.expr[":"],
           }
           $i2++;
           $i1++;
-
         }
         $i1=0;
         $i2=0;
@@ -113,8 +132,8 @@ $.extend($.expr[":"],
        </td>
             ";
         echo "</tr>";
-
       }
+      
       ?>
       @endif
     </tbody>

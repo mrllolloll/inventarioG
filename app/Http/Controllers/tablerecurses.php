@@ -61,6 +61,10 @@ class tablerecurses extends Controller
       case 'Dual':
         return "Dual";
       break;
+
+      case 'file':
+        return "varchar(40)";
+      break;
     }
   }
 
@@ -84,6 +88,12 @@ class tablerecurses extends Controller
       case 'number':
 
         return "number";
+
+      break;
+
+      case 'file':
+
+        return "file";
 
       break;
     }

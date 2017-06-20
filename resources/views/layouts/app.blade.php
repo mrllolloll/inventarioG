@@ -10,10 +10,10 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    
-   
+
+
    <link rel="stylesheet" type="text/css" href="/css/roboto.css">
-    
+
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -35,8 +35,8 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-   
-   
+
+
 
 </head>
 
@@ -56,7 +56,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/home') }}" id="brand1">
-                            <img alt="" src="{{url('css/seniat.png')}}" class="logo" id="brand2">
+                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" id="brand2"/>
                     </a>
                 </div>
 
@@ -97,7 +97,7 @@
             </div>
         </nav>
         <!-- Scripts -->
-        <script src="/js/jquery-1.10.2.min.js"></script>
+        <script src="/js/jquery-3.2.1.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/ripples.min.js"></script>
         <script src="/js/material.min.js"></script>

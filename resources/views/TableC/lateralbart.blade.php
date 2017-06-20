@@ -123,8 +123,11 @@ function CasoSelet11($value)
  <br><br>
  </div>
     </div>
+
+
 @include('formularios.agredual')
 @include('formularios.agrecamptable')
 @include('formularios.agragrdat')
 @include('Mensajes.DeleteMoldal')
 @include('Mensajes.Deletemodallateral')
+@include('formularios.mostrar')

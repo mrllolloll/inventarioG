@@ -43,6 +43,11 @@ return [
 
     'disks' => [
 
+        'imgInventario' => [
+            'driver' => 'local',
+            'root' => public_path('imgInventario'),
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
