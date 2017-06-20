@@ -59,8 +59,9 @@ class agrcampos extends Controller
           if ($o->nombclum=='file') {
           
             $img = $request->file($i1);
-            $file_route= time().'_'.$img->getClientOriginalName($request->file($i1));
+            $file_route = time().'_'.$img->getClientOriginalName($request->file($i1));
             Storage::disk('imgInventario')->put($file_route, file_get_contents($img->getRealPath()));
+            
           }
 
           $fatamano.=",".$this->CasoAelet1($i[$i1]);

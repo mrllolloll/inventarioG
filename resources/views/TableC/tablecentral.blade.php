@@ -99,8 +99,8 @@ $.extend($.expr[":"],
           $mostar=CasoSelet($i[$i1]);
           if ($i0[$i2]!="Dual") {
               
-              if (substr($lol->$mostar, 18)=="tmp"){
-                 echo "<td><a href='/imagen/".$lol->id."' class='.btn btn-primary btn-xs'>Imagen</a></td>";
+              if (substr($lol->$mostar, 17)==".tmp"){
+                 echo "<td><a href='#' data-toggle='modal' data-target='#mostrar' class='.btn btn-primary btn-xs'>Imagen</a></td>";
               }else{
                 
                 echo "<td>".$lol->$mostar."</td>";
