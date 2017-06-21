@@ -1,3 +1,4 @@
+<?php use Illuminate\Support\Facades\DB; ?>
 @extends('TableC.modalagracamp1', ['imodal'=>"agreinfo"])
 @section('titlmodal','Desea agregar informacion?')
 @section('contentmodl')
@@ -19,7 +20,7 @@ function CasoSeletr($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 } ?>
 
-<form  method="POST" class="form-horizontal" role="form" method="post" action="{{url('camp')}}">
+<form  method="POST" class="form-horizontal" role="form" method="post" action="{{url('camp')}}" enctype="multipart/form-data">
   {{ csrf_field() }}
 @if(isset($titutable))
     <?php
@@ -31,7 +32,8 @@ function CasoSeletr($value)
       $dates=$o->nombclum;
       if ($dates!="false") {
           if ($dates=="DATE") {
-            echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">
+            echo '
+            <section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">
             <input required type="text" id="id'.$fatamano.'"   name="'.$i1.'" class="form-control">
             </section></section>
             <script type="text/javascript">
@@ -40,6 +42,21 @@ function CasoSeletr($value)
             });
             </script>
             ';
+          }elseif($dates=="Dual"){
+              $dualar="tab_";
+              $dualar.=$fatamano;
+              $data = DB::table($dualar)->get();
+              echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">';
+              echo '<select id="id'.$fatamano.'" name="'.$i1.'" class="form-control" required>';
+              echo '<option value="">Seleccionar una opcion</option>';
+              foreach ($data as $datas) {
+                echo '<option value="'.$datas->id.'">'.$datas->info.'</option>';
+              }
+              echo '</select>';
+              echo '</section>
+                    </section>';
+          }elseif($dates =='file') {
+            echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Seleccionar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control" required></section></section>';
           }else {
             echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control" required></section></section>';
           }
@@ -55,7 +72,7 @@ function CasoSeletr($value)
   </section>
   <section class="form-group">
     <section class="col-md-2 col-md-offset-4">
-      <button class="btn btn-primary">
+      <button class="btn btn-blanco-modal">
         Registrar
       </button>
     </section>

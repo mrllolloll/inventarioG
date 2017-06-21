@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\TableCentral;
 use Illuminate\Support\Facades\DB;
 use App\camptable;
+use Illuminate\Support\Facades\Auth;
+use Storage;
 
 class agrcampos extends Controller
 {
@@ -53,15 +55,26 @@ class agrcampos extends Controller
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
         if ($o->nombclum!="false") {
+          
+          if ($o->nombclum=='file') {
+          
+            $img = $request->file($i1);
+            $file_route = time().'_'.$img->getClientOriginalName($request->file($i1));
+            Storage::disk('imgInventario')->put($file_route, file_get_contents($img->getRealPath()));
+            
+          }
+
           $fatamano.=",".$this->CasoAelet1($i[$i1]);
           $yolito.=",'".$request->$i1."'";
+         
         }
         $i1++;
       }
-      $insertado = DB::insert('insert into table_centrals (user_id'.$fatamano.') values (1'.$yolito.')');
-      $i1=0;
-      return redirect('/home');
 
+      $insertado = DB::insert('insert into table_centrals (user_id'.$fatamano.') values ('.Auth::user()->id.''.$yolito.')');
+      $i1=0;
+     
+      return redirect('/home');
     }
 
     /**

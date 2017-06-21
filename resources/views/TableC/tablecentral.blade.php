@@ -7,6 +7,9 @@ function CasoSelet($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 } ?>
 <script>
+function ondelet(value){
+  $("#FormDelete").attr('action',value);
+}
 $(document).ready(function(){
   // Write on keyup event of keyword input element
   $("#kwd_search").keyup(function(){
@@ -34,7 +37,7 @@ $.extend($.expr[":"],
 });
 </script>
 
-<section class="table-responsive">
+<section class="table-responsive col-xs-5 col-sm-12 col-md-12" style="overflow-x: scroll;">
   <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))
     <thead>
@@ -55,37 +58,82 @@ $.extend($.expr[":"],
 
       <?php
       $i1=0;
-
+      $i2=0;
+      $titulos= array();
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
+        if ($o->nombclum=="Dual") {
+          $i0[$i2]=true;
+        }else {
+          $i0[$i2]=false;
+        }
+        
+        $i2++;
         $i1++;
-      }
 
+      }
+      $iz=1;
       $i1=0;
-      foreach ($table as $lol) {
+      $i2=0;
+      $cps=0;
+      $campos = array('');
+      $campos1 = array('');
+      $consultas=array('');
+      $consultas= array('');
+      
+      $consulta = DB::table('camptables')->where('nombclum', '=','file')->get();
+      
+      
+         
+      foreach ($consulta as $const) {
+        $campos1[]= $const->nomtable;
+        $campos[] = $const->nombclum;
+      }
+     
+      
+
+      foreach ($table as $lol){
+     
         echo "<tr>";
-        while ($i1 < count($i)) {
+        while ($i1 < count($i)){
           $mostar=CasoSelet($i[$i1]);
-          echo "<td>".$lol->$mostar."</td>";
+          if ($i0[$i2]!="Dual") {
+              
+              if (substr($lol->$mostar, 17)==".tmp"){
+                 echo "<td><a href='#' data-toggle='modal' data-target='#mostrar' class='.btn btn-primary btn-xs'>Imagen</a></td>";
+              }else{
+                
+                echo "<td>".$lol->$mostar."</td>";
+               
+              }
+                  
+                        
+          }else{
+          
+          if ($busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first()) {
+                echo "<td>".$busc->info."</td>";
+            }else {
+              echo "<td>N/A</td>";
+            }
+          }
+          $i2++;
           $i1++;
         }
         $i1=0;
+        $i2=0;
         $kk=route('camp.destroy',$lol->id);
 
        echo"
        <td>
-       <form  action='".$kk."' method='POST'>
-          ".csrf_field()."
         <div class='btn-group'>
-        <a href='/camp/".$lol->id."/edit' class='btn btn-primary btn-xs'>Editar</a>
-            <input type='hidden' name='_method' value='DELETE'>
-            <input type='submit' class='btn btn-danger btn-xs' value='Borrar'>
-        </form>
+        <a href='/camp/".$lol->id."/edit' class='btn btn-blanco btn-xs' id='margenBtnFront'>Editar</a>
+        <a type='button' class='btn btn-danger btn-xs' id='margenBtnFront1' data-toggle='modal' data-target='#borr11' onclick='ondelet( \"".$kk."\")'>Borrar</a>
         </div>
        </td>
             ";
         echo "</tr>";
       }
+      
       ?>
       @endif
     </tbody>

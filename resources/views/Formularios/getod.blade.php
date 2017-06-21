@@ -13,30 +13,63 @@ function CasoSeletcx($value)
 <section class="table-responsive">
 <form class="form-horizontal" role="form" action="{{url('/pdf')}}" method="GET">
 {{ csrf_field() }}
-<center>
-Buscar: 
 @if(isset($titutable))
     @if(isset($table))
       <?php
       $i1=0;
-      echo "<select name='ss'>";
+      echo "
+      <div class='form-group'>
+      <div class='col-md-12'>
+      <div class='col-md-2'>
+        Buscar:
+      </div>
+      <div class='col-md-4'>
+      <select name='ss' class='form-control'>";
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
         $holo=CasoSeletcx($i[$i1]);
         echo "<option value='$holo'>".$i[$i1]."</option>";
         $i1++;
       }
-      echo "</select>";
-      echo "<input type='text' name='ll'>";
+      echo "</select>
+            </div>";
+      echo "<div class='col-md-5'>
+      <input type='text' name='ll'class='form-control' placeholder='Ingresar parametro'>
+        </div>
+        </div>
+        </div>";
+
+      echo '<div class="form-group">
+              <fieldset class="col-md-12">
+              <legend>Modulos a mostrar en el reporte</legend>';
+              $i1=0;
+              foreach ($titutable as $o) {
+                $i[$i1]=$o->nomtable;
+                $holo=CasoSeletcx($i[$i1]);
+              echo '
+              <div class="checkbox">
+              <label>
+              <input type="checkbox" name="'.$holo.'" id="c_'.$holo.'" value="'.$holo.'">
+              '.$i[$i1].'
+              </label>
+              </div>
+
+	           ';
+
+               $i1++;
+             }
+            echo '
+            </div>
+            </fieldset>';
       $i1=0;
 
       ?>
       @endif
-    </center>
+
       <br>
       <section class="form-group">
         <section class="col-md-2 col-md-offset-4">
-          <button class="btn btn-primary">
+          <button class="btn btn-blanco-modal">
             Registrar
           </button>
         </section>

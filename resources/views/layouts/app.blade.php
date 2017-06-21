@@ -10,19 +10,39 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+
+
+   <link rel="stylesheet" type="text/css" href="/css/roboto.css">
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Bootstrap Material Design -->
+      <link href="/css/bootstrap-material-design.css" rel="stylesheet">
+      <link href="/css/ripples.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
+
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
+
+    <!-- Styles -->
+    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+
+
+
 </head>
+
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-margen" id="nav">
             <div class="container">
                 <div class="navbar-header">
 
@@ -35,8 +55,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/home') }}" style=" padding-bottom: 40px;">
-                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" style="margin-top:-10px; height:60px; width:140px; "/>
+                    <a class="navbar-brand" href="{{ url('/home') }}" id="brand1">
+                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" id="brand2"/>
                     </a>
                 </div>
 
@@ -47,17 +67,17 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" id="pos-brand">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            <li  ><a href="{{ url('/login') }}"  id="login" class="login">Login</a></li>
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <li class="dropdown login">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="login" >
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu" role="menu"  id="fondoLog">
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
@@ -77,7 +97,33 @@
             </div>
         </nav>
         <!-- Scripts -->
-        <script src="/js/app.js"></script>
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/ripples.min.js"></script>
+        <script src="/js/material.min.js"></script>
+        <script>
+          $(function () {
+            $.material.init();
+            $(".shor").noUiSlider({
+              start: 40,
+              connect: "lower",
+              range: {
+                min: 0,
+                max: 100
+              }
+            });
+
+            $(".svert").noUiSlider({
+              orientation: "vertical",
+              start: 40,
+              connect: "lower",
+              range: {
+                min: 0,
+                max: 100
+              }
+            });
+          });
+        </script>
         @yield('content')
     </div>
 
