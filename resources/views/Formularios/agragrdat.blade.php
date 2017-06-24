@@ -20,7 +20,7 @@ function CasoSeletr($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 } ?>
 
-<form  method="POST" class="form-horizontal" role="form" method="post" action="{{url('camp')}}">
+<form  method="POST" class="form-horizontal" role="form" method="post" action="{{url('camp')}}" enctype="multipart/form-data">
   {{ csrf_field() }}
 @if(isset($titutable))
     <?php
@@ -55,7 +55,10 @@ function CasoSeletr($value)
               echo '</select>';
               echo '</section>
                     </section>';
-          }else {
+          }elseif($dates=="file") {
+            echo '<section class="col-md-12"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" required></section></section>';
+            echo "<br><br>";
+          }else{
             echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control" required></section></section>';
           }
       }

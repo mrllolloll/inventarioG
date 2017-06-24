@@ -18,6 +18,7 @@
         <option value="text">Texto</option>
         <option value="number">Numeros </option>
         <option value="Dual">Dual </option>
+        <option value="Img">Imagenes</option>
       </select>
     </section>
   </section>

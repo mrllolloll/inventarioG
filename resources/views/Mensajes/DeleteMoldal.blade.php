@@ -5,6 +5,8 @@
    {{csrf_field()}}
      <center><h3>¿Esta seguro que desea borrar este registro?</h3></center>
      <input type='hidden' name='_method' value='DELETE'>
+     <input type='hidden' name='Img' class="boolT">
+
      <center><input type='submit' class='btn btn-eliminar btn-xs' style="color:white;" value='Aceptar'></center>
  </form>
 @endsection

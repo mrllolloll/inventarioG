@@ -7,6 +7,7 @@ use App\TableCentral;
 use Illuminate\Support\Facades\DB;
 use App\camptable;
 use Illuminate\Support\Facades\Auth;
+use Storage;
 
 class agrcampos extends Controller
 {
@@ -54,8 +55,16 @@ class agrcampos extends Controller
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
         if ($o->nombclum!="false") {
-          $fatamano.=",".$this->CasoAelet1($i[$i1]);
-          $yolito.=",'".$request->$i1."'";
+          if ($o->nombclum=="file") {
+            $img=$request->file($i1);
+            $file_route=time().'_'.$img->getClientOriginalName();
+            Storage::disk('Imgtable')->put($file_route,file_get_contents($img->getRealPath()));
+            $fatamano.=",".$this->CasoAelet1($i[$i1]);
+            $yolito.=",'".$file_route."'";
+          }else {
+            $fatamano.=",".$this->CasoAelet1($i[$i1]);
+            $yolito.=",'".$request->$i1."'";
+          }
         }
         $i1++;
       }
@@ -103,7 +112,7 @@ class agrcampos extends Controller
       $titutable=camptable::all();
       $camsearch=TableCentral::find($id);
       $i1=0;
-      $tolsl="";
+      $tolsl=0;// esta linea no se esta usando, usar para hacerlo un array para borrar imagenes y renplazarlo por uno en 
       $code="";
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
@@ -123,9 +132,15 @@ class agrcampos extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,Request $request)
     {
-      TableCentral::destroy($id);
+        if ($request->Img!="") {
+          $arr=explode(",",$request->Img);
+          foreach ($arr as $value) {
+              Storage::disk('Imgtable')->delete($value);
+          }
+        }
+        TableCentral::destroy($id);
       return back();
     }
 }

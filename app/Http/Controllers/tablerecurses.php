@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\TableCentral;
 use Illuminate\Support\Facades\DB;
 use App\camptable;
-
+use Storage;
 class tablerecurses extends Controller
 {
   /**
@@ -61,6 +61,9 @@ class tablerecurses extends Controller
       case 'Dual':
         return "Dual";
       break;
+      case 'Img':
+        return "file";
+      break;
     }
   }
 
@@ -89,14 +92,13 @@ class tablerecurses extends Controller
     }
   }
 
-
   public function store(Request $request)
   {
     //
     $this->validate($request,[
       'nommodul'=>'required',
       'nommodul'=>'unique:camptables,nomtable',
-      'nommodul'=>'max:18',
+      'nommodul'=>'max:20',
       'objet'=>'required',
     ]);
     $descrip=$this->CasoSelet($request->objet,$request->Fechaauto);
@@ -104,20 +106,26 @@ class tablerecurses extends Controller
     $indicador = array(0=>"/ /");
     $sustitu = array(0=>"_");
     $mofi=preg_replace($indicador,$sustitu,$mofi1);
-    if ($descrip!="Dual") {
-        $sinta=$mofi." ".$descrip;
-        $results=DB::statement('Alter table table_centrals add '.$sinta);
-        $descript=$this->yolo($request->objet,$request->Fechaauto);
-        $nomert=new camptable;
-        $nomert->nomtable=$request->nommodul;
-        $nomert->nombclum=$descript;
-        $nomert->save();
-    }else {
+    if ($descrip=="Dual") {
       $results=DB::statement('Alter table table_centrals add '.$mofi.' int');
       $results=DB::statement('CREATE TABLE tab_'.$mofi.' (id int NOT NULL AUTO_INCREMENT,info varchar(255) NOT NULL,PRIMARY KEY (id))');
       $nomert=new camptable;
       $nomert->nomtable=$request->nommodul;
       $nomert->nombclum="Dual";
+      $nomert->save();
+    }elseif ($descrip=="file") {
+      $results=DB::statement('Alter table table_centrals add '.$mofi.' varchar(100)');
+      $nomert=new camptable;
+      $nomert->nomtable=$request->nommodul;
+      $nomert->nombclum=$descrip;
+      $nomert->save();
+    }else{
+      $sinta=$mofi." ".$descrip;
+      $results=DB::statement('Alter table table_centrals add '.$sinta);
+      $descript=$this->yolo($request->objet,$request->Fechaauto);
+      $nomert=new camptable;
+      $nomert->nomtable=$request->nommodul;
+      $nomert->nombclum=$descript;
       $nomert->save();
     }
 
@@ -167,6 +175,13 @@ class tablerecurses extends Controller
   */
   public function destroy(Request $request,$id)
   {
+    $Img=camptable::find($id);
+    if ($Img->nombclum=="file") {
+      $borr=TableCentral::all();
+      foreach ($borr as $value) {
+        Storage::disk('Imgtable')->delete($value->$_GET['yolo']);
+      }
+    }
     camptable::destroy($id);
     $results=DB::statement('alter table table_centrals drop column '.$_GET['yolo']);
     if ($request->bool=="true") {

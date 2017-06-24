@@ -42,7 +42,13 @@ function CasoSelet($value)
              }else {
                echo "<td>N/A</td>";
              }
-          }else {
+          }elseif ($i0[$i1]=="file") {
+            if ($lol->$mostar!="") {
+              echo '<td><img src="Imgtable/'.$lol->$mostar.'" width="200" height="200"></td>';
+            }else {
+              echo '<td>N/A</td>';
+            }
+          }else{
           echo "<td>".$lol->$mostar."</td>";
         }
         $i1++;
