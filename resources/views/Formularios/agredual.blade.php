@@ -7,7 +7,7 @@
   <section class="form-group">
     <label for="dat" class="col-md-4">Ingresar datos:</label>
     <section Class="col-md-8">
-      <input id="dat" type="text" name="datos1" class="form-control" required>
+      <textarea id="dat" name="datos1" cols="40" rows="5" class="form-control  textL" required maxlength="255"></textarea>
     </section>
   </section>';
   <section class="form-group">

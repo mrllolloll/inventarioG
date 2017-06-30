@@ -6,7 +6,7 @@
   <section class="form-group">
     <label for="nommodulid" class="col-md-4">Ingrese nombre del modulo</label>
     <section Class="col-md-8">
-      <input id="nommodulid" type="text" name="nommodul" class="form-control" placeholder="Ejemplo: Direcciones" required>
+      <input id="nommodulid" type="text" name="nommodul" class="form-control" placeholder="Ejemplo: Direcciones" maxlength="20" required>
     </section>
   </section>
   <section class="form-group">

@@ -24,7 +24,8 @@ function CasoSeletcx($value)
         Buscar:
       </div>
       <div class='col-md-4'>
-      <select name='ss' class='form-control'>";
+      <select name='ss' class='form-control' required>
+      <option value=''>Seleccionar una opcion</option>";
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
         $holo=CasoSeletcx($i[$i1]);
@@ -34,7 +35,7 @@ function CasoSeletcx($value)
       echo "</select>
             </div>";
       echo "<div class='col-md-5'>
-      <input type='text' name='ll'class='form-control' placeholder='Ingresar parametro'>
+      <input type='text' name='ll'class='form-control'required placeholder='Ingresar parametro'>
         </div>
         </div>
         </div>";

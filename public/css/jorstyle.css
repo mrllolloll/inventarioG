@@ -1,0 +1,14 @@
+.bordebuttonfixed{
+  border-style: solid;
+  border-color:rgb(0, 0, 0) ;
+}
+.bordebuttonfixedinter{
+  border-style: solid;
+  border-width: 0px 1px 0px 1px;
+  border-color:rgb(0, 0, 0) ;
+}
+.bordebuttonfixeddin{
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color:rgb(0, 0, 0);
+}

@@ -4,48 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-
-
-   <link rel="stylesheet" type="text/css" href="/css/roboto.css">
-
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-
-      <!-- Bootstrap Material Design -->
-      <link href="/css/bootstrap-material-design.css" rel="stylesheet">
-      <link href="/css/ripples.min.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="/css/style.css">
-
-    <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-
-
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>{{ config('app.name', 'Laravel') }}</title>
+  <link rel="stylesheet" type="text/css" href="/css/roboto.css">
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Material Design -->
+  <link href="/css/bootstrap-material-design.css" rel="stylesheet">
+  <link href="/css/ripples.min.css" rel="stylesheet">
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jorstyle.css">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-
-
-
 </head>
-
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-fixed-top navbar-margen" id="nav">
             <div class="container">
                 <div class="navbar-header">
-
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -84,7 +67,6 @@
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
-
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>

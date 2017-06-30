@@ -15,10 +15,15 @@ function CasoSeletr3($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 } ?>
 
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".botonsed").hide();
+  })
+</script>
 
 <form  method="POST" class="form-horizontal" role="form" method="post" action="{{route('camp.update',$camper->id)}}" enctype="multipart/form-data">
   {{ csrf_field() }}
-    <input type="hidden" name="_method" value="PUT">    
+    <input type="hidden" name="_method" value="PUT">
 @if(isset($titutable))
     <?php
     $i1=0;
@@ -58,8 +63,10 @@ function CasoSeletr3($value)
                 </section>';
         }elseif($dates=="file") {
           echo '<input id="id'.$fatamano.'" type="hidden" name="'.$i1.'" value="'.$camper->$fatamano.'" class="form-control">';
+        }elseif ($dates=="number") {
+          echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" value="'.$camper->$fatamano.'" class="numL form-control"></section></section>';
         }else{
-          echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" value="'.$camper->$fatamano.'" class="form-control"></section></section>';
+          echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" value="'.$camper->$fatamano.'" class="textL form-control"></section></section>';
       }
     }
 
@@ -73,10 +80,15 @@ function CasoSeletr3($value)
     </section>
   </section>
   <section class="form-group">
-    <section class="col-md-2 col-md-offset-4">
+    <section class="col-md-2  col-md-offset-4">
       <button class="btn btn-blanco-modal">
         Registrar
       </button>
+    </section>
+    <section class="col-md-2 ">
+      <a type="button" href="{{url('home')}}" class="btn btn-blanco-modal">
+        Cancelar
+      </a>
     </section>
   </section>
 </form>

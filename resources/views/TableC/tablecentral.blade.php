@@ -7,6 +7,7 @@ function CasoSelet($value)
   return preg_replace($indicador,$sustitu,$mofi1);
 } ?>
 <script>
+$(document).ready(function(){$('.fff').removeClass("hide");$('.fff').hide(0);  });
 function ondelet(value,value1){
   $("#FormDelete").attr('action',value);
   $(".boolT").val(value1);
@@ -39,9 +40,37 @@ $.extend($.expr[":"],
 
 function ImagenesView(value){
   $('.imgredirc').attr("src",value);
+  $('.imgredirc').attr("href",value);
 }
-</script>
 
+function OcultBoto(value,value1){
+  if (value == "true") {
+    $('.fff').hide(300);
+    $('.LL').show(300);
+    $('.hidetaion'+value1).hide(300);
+    $('.botonds'+value1).show(300);
+  }else{
+    $('.hidetaion'+value1).show(300);
+    $('.botonds'+value1).hide(300);
+  }
+}
+
+$(document).ready(function(){
+       $(".DetallesClass").click(function(){
+
+           var valores="";
+           var into=0;
+           // Obtenemos todos los valores contenidos en los <td> de la fila
+           // seleccionada
+           $(this).parents("tr").find("td").each(function(){
+               valores+=$(this).html()+"\n";
+           });
+
+           alert(valores);
+       });
+});
+
+</script>
 <section class="table-responsive col-xs-5 col-sm-12 col-md-12">
   <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))
@@ -52,6 +81,7 @@ function ImagenesView(value){
         </th>
       </tr>
       <tr>
+        <!--Cambiar de lugar las opciones para el primerpuesto y agregarles detalles validar el resto con jquery y validate en laravel en su respectivo modelos en especial las imagenes con jquery-->
         @foreach($titutable as $n)
         <th>{{$n->nomtable}}</th>
         @endforeach
@@ -60,7 +90,6 @@ function ImagenesView(value){
     </thead>
     <tbody>
       @if(isset($table))
-
       <?php
       $i1=0;
       $i2=0;
@@ -93,11 +122,17 @@ function ImagenesView(value){
             if ($i3[$i2]!=true) {
               echo "<td>".$lol->$mostar."</td>";
             }else {
-              echo '<td>
-                      <button type="button" class="btn btn-primary btn-xs" style="color:white;" data-toggle="modal" data-target="#ImgBoton" onclick="ImagenesView(\'Imgtable/'.$lol->$mostar.'\')">
-                          Visualizar
-                      </button>
-                    </td>';
+              if ($lol->$mostar!="") {
+                echo '<th>
+                        <button type="button" class="btn btn-primary btn-xs" style="color:white;" data-toggle="modal" data-target="#ImgBoton" onclick="ImagenesView(\'Imgtable/'.$lol->$mostar.'\')">
+                            Visualizar
+                        </button>
+                      </th>';
+              }else {
+                echo "<td>N/A</td>";
+              }
+
+
                     if ($visualimg!="") {
                       $visualimg.=",".$lol->$mostar;
                     }else {
@@ -118,15 +153,18 @@ function ImagenesView(value){
         $i1=0;
         $i2=0;
         $kk=route('camp.destroy',$lol->id);
-
        echo"
-       <td>
-        <div class='btn-group'>
-        <a href='/camp/".$lol->id."/edit' class='btn btn-blanco btn-xs' id='margenBtnFront'>Editar</a>
-        <a type='button' class='btn btn-danger btn-xs' id='margenBtnFront1' data-toggle='modal' data-target='#borr11' onclick='ondelet(\"".$kk."\",\"".$visualimg."\")'>Borrar</a>
+       <th>
+       <center>
+        <a type='button' class='btn btn-blanco btn-xs LL hidetaion".$lol->id." ' onclick='OcultBoto(\"true\",".$lol->id.")'>Ver Opciones</a>
+        <div class='btn-group-vertical fff botonds".$lol->id." hide'>
+          <a href='/camp/".$lol->id."/edit' class='btn btn-blanco btn-xs bordebuttonfixed'>Editar</a>
+          <a type='button' class='btn btn-blanco btn-xs bordebuttonfixedinter DetallesClass hide'>Detalles</a>
+          <a type='button' class='btn btn-danger btn-xs bordebuttonfixedinter' style='color:white;' data-toggle='modal' data-target='#borr11' onclick='ondelet(\"".$kk."\",\"".$visualimg."\")'>Borrar</a>
+          <a type='button' class='btn btn-primary btn-xs bordebuttonfixeddin' style='color:white' onclick='OcultBoto(\"false\",".$lol->id.")'>Cancelar</a>
         </div>
-       </td>
-            ";
+        </center>
+       </th>";
         echo "</tr>";
       }
       ?>

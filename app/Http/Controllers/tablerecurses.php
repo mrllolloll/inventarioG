@@ -94,13 +94,19 @@ class tablerecurses extends Controller
 
   public function store(Request $request)
   {
-    //
     $this->validate($request,[
-      'nommodul'=>'required',
-      'nommodul'=>'unique:camptables,nomtable',
+      'nommodul'=>'required|regex:[a-z{1}[A-Z]{1}[0-9]{1}]',      
       'nommodul'=>'max:20',
       'objet'=>'required',
     ]);
+    $varif=camptable::all();
+    $iso=false;
+    foreach ($varif as $valita) {
+        if ($valita->nomtable==$request->nommodul) {
+          $iso=true;
+        }
+    }
+    if ($iso!=true) {
     $descrip=$this->CasoSelet($request->objet,$request->Fechaauto);
     $mofi1=$request->nommodul;
     $indicador = array(0=>"/ /");
@@ -128,7 +134,7 @@ class tablerecurses extends Controller
       $nomert->nombclum=$descript;
       $nomert->save();
     }
-
+}
     return redirect('/home');
 
   }
@@ -181,6 +187,16 @@ class tablerecurses extends Controller
       foreach ($borr as $value) {
         Storage::disk('Imgtable')->delete($value->$_GET['yolo']);
       }
+    }
+    $invest=camptable::all();
+    $i=0;
+    foreach ($invest as $veri) {
+      if (isset($veri->nomtable)) {
+          $i++;
+      }
+    }
+    if ($i<=1) {
+      DB::statement('TRUNCATE table_centrals');
     }
     camptable::destroy($id);
     $results=DB::statement('alter table table_centrals drop column '.$_GET['yolo']);
