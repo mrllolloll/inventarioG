@@ -31,15 +31,19 @@ Route::get('/pdf', function () {
   $i=0;
   $char= array();
   foreach ($titutable as $dual ) {
-      $borr=CasoSelet101($dual->nomtable);
+      $borr=CasoSelet101($dual->nomtable);      
       if (isset($_GET[$borr])) {
         $char=array_add($char,$dual->nomtable,$dual->nomtable);
         $i++;
       }
-      if ($dual->nombclum=="Dual" && $dual->nomtable == $bor ) {
-        $table=App\TableCentral::join('tab_'.$_GET['ss'],'table_centrals.'.$_GET['ss'],'=','tab_'.$_GET['ss'].'.id')->where('tab_'.$_GET['ss'].'.info','=',$_GET['ll'])->get();
-      }elseif($dual->nombclum !="Dual" && $dual->nomtable == $bor){
-        $table=App\TableCentral::where($_GET['ss'],'=',$_GET['ll'])->get();
+      if ($_GET['ll']!="CHOR_STRUCK_ALL") {
+        if ($dual->nombclum=="Dual" && $dual->nomtable == $bor ) {
+          $table=App\TableCentral::join('tab_'.$_GET['ss'],'table_centrals.'.$_GET['ss'],'=','tab_'.$_GET['ss'].'.id')->where('tab_'.$_GET['ss'].'.info','=',$_GET['ll'])->get();
+        }elseif($dual->nombclum !="Dual" && $dual->nomtable == $bor){
+          $table=App\TableCentral::where($_GET['ss'],'=',$_GET['ll'])->get();
+        }
+      }else{
+          $table=App\TableCentral::all();
       }
   }
   $pdf = PDF::loadView('pdfimp',['table'=>$table,'titutable'=>$titutable,'char'=>$char]);

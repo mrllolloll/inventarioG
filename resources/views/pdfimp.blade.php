@@ -62,12 +62,13 @@
       border: 1px solid;
     }
     table{
+      margin-top: 10px;
       border: 0.1px solid;
     }
     header{
       text-align: left;
       margin-top: 10px;
-      padding-bottom: 15px;
+      margin-bottom: 20px;
     }
     header img{
       display: inline-block;
@@ -80,7 +81,6 @@
       margin-left: 210px;
       margin-top: 30px;
     }
-
     </style>
 </head>
 <body>
@@ -105,7 +105,6 @@
     </table>
   </footer>
   <div id="content">
-    <br><br>
     @include('TableC.impta')
   </div>
 </body>

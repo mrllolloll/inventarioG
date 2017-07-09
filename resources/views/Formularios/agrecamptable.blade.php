@@ -24,7 +24,9 @@
   </section>
   <section class="form-group" id="ocult">
     <section class="col-md-8">
-        <input type="checkbox" id="cbox0" name="Fechaauto" value="true"> <label for="cbox0">Fecha automatica por registro.</label>
+        <div class='checkbox'>
+          <label for="cbox0"><input type="checkbox" id="cbox0" name="Fechaauto" value="true">  Fecha automatica por registro.</label>
+        </div>
     </section>
   </section>
   <section class="form-group">

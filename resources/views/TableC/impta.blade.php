@@ -6,7 +6,6 @@ function CasoSelet($value)
   $indicador = array(0=>"/ /");
   return preg_replace($indicador,$sustitu,$mofi1);
 } ?>
-
 <section class="table-responsive">
   <table id="my-table" class="table table-striped table-hover">
     @if(isset($titutable))

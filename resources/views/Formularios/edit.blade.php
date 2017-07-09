@@ -18,7 +18,7 @@ function CasoSeletr3($value)
 <script type="text/javascript">
   $(document).ready(function(){
     $(".botonsed").hide();
-  })
+  });
 </script>
 
 <form  method="POST" class="form-horizontal" role="form" method="post" action="{{route('camp.update',$camper->id)}}" enctype="multipart/form-data">

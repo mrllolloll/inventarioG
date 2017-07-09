@@ -95,7 +95,7 @@ class tablerecurses extends Controller
   public function store(Request $request)
   {
     $this->validate($request,[
-      'nommodul'=>'required|regex:[a-z{1}[A-Z]{1}[0-9]{1}]',      
+      'nommodul'=>'required|regex:[a-z{1}[A-Z]{1}[0-9]{1}]',
       'nommodul'=>'max:20',
       'objet'=>'required',
     ]);
@@ -169,7 +169,7 @@ class tablerecurses extends Controller
   * @return \Illuminate\Http\Response
   */
   public function update(Request $request, $id)
-  {
+  {    
     //
   }
 
