@@ -85,8 +85,7 @@
 </head>
 <body>
   <header>
-    <img src="images/header1.jpg" width="1000" height="52">
-    <img src="css/seniat.png" width="200" height="100">
+    <img src="images/Giralda1.jpg" width="200" height="130">
   </header>
   <footer>
     <table>

@@ -39,7 +39,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/home') }}" id="brand1">
-                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" id="brand2"/>
+                        <img alt="" src="{{url('css/Giralda.png')}}" class="logo" style="height:50px;" id="brand2"/>
                     </a>
                 </div>
 

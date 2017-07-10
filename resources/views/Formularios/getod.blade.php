@@ -40,9 +40,24 @@ function CasoSeletcx($value)
       $('.BotonOcul').show(100);
     }
   }
+  $(document).ready(function() {
+
+  $('formPDF').keypress(function(e){   
+    if(e == 13){
+      return false;
+    }
+  });
+
+  $('input').keypress(function(e){
+    if(e.which == 13){
+      return false;
+    }
+  });
+
+});
 </script>
 <section class="table-responsive">
-<form class="form-horizontal" role="form" action="{{url('/pdf')}}" method="GET">
+<form id="formPDF" class="form-horizontal" role="form" action="{{url('/pdf')}}" method="GET">
 {{ csrf_field() }}
 @if(isset($titutable))
     @if(isset($table))
