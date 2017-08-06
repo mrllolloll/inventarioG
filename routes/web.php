@@ -31,7 +31,7 @@ Route::get('/pdf', function () {
   $i=0;
   $char= array();
   foreach ($titutable as $dual ) {
-      $borr=CasoSelet101($dual->nomtable);      
+      $borr=CasoSelet101($dual->nomtable);
       if (isset($_GET[$borr])) {
         $char=array_add($char,$dual->nomtable,$dual->nomtable);
         $i++;
@@ -58,9 +58,12 @@ Route::get('/', function () {
 Route::get('/home1', function () {
     return view('home');
 });
-
+Route::get('GeneradoDePlanillas', function () {
+    return view('AdminGeneradorPlanillas');
+});
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('/tablerecurses','tablerecurses');
 Route::resource('/camp','agrcampos');
+Route::resource('/Rest','agrcampos@edit1');
 Route::resource('/agre','AgrecamDinamic');

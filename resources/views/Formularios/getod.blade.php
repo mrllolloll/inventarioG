@@ -89,10 +89,7 @@ function CasoSeletcx($value)
               <input type="checkbox" name="'.$holo.'" id="c_'.$holo.'" onclick="SumOption(\'c_'.$holo.'\')" value="'.$holo.'">
               '.$i[$i1].'
               </label>
-              </div>
-
-	           ';
-
+              </div>';
                $i1++;
              }
             echo '

@@ -83,6 +83,7 @@
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/ripples.min.js"></script>
         <script src="/js/material.min.js"></script>
+        <script src="/js/jqueryui/jquery-ui.min.js"></script>
         <script>
           $(function () {
             $.material.init();

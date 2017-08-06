@@ -72,7 +72,7 @@ $(document).ready(function(){
 
 </script>
 <section class="table-responsive col-xs-5 col-sm-12 col-md-12">
-  <table id="my-table" class="table table-striped table-hover">
+  <table id="my-table" class="table table-condensed table-striped table-hover">
     @if(isset($titutable))
     <thead>
       <tr>
@@ -131,14 +131,11 @@ $(document).ready(function(){
               }else {
                 echo "<td>N/A</td>";
               }
-
-
-                    if ($visualimg!="") {
-                      $visualimg.=",".$lol->$mostar;
-                    }else {
-                      $visualimg.=$lol->$mostar;
-                    }
-
+                if ($visualimg!="") {
+                  $visualimg.=",".$lol->$mostar;
+                }else {
+                  $visualimg.=$lol->$mostar;
+                }
             }
           }else {
            if ($busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first()) {
@@ -159,7 +156,7 @@ $(document).ready(function(){
         <a type='button' class='btn btn-blanco btn-xs LL hidetaion".$lol->id." ' onclick='OcultBoto(\"true\",".$lol->id.")'>Ver Opciones</a>
         <div class='btn-group-vertical fff botonds".$lol->id." hide'>
           <a href='/camp/".$lol->id."/edit' class='btn btn-blanco btn-xs bordebuttonfixed'>Editar</a>
-          <a type='button' class='btn btn-blanco btn-xs bordebuttonfixedinter DetallesClass hide'>Detalles</a>
+          <a type='button' class='btn btn-blanco btn-xs bordebuttonfixedinter' data-toggle='modal' data-target='#DetallesPrima' onclick='realizaProceso(".$lol->id.");return false;'>Detalles</a>
           <a type='button' class='btn btn-danger btn-xs bordebuttonfixedinter' style='color:white;' data-toggle='modal' data-target='#borr11' onclick='ondelet(\"".$kk."\",\"".$visualimg."\")'>Borrar</a>
           <a type='button' class='btn btn-primary btn-xs bordebuttonfixeddin' style='color:white' onclick='OcultBoto(\"false\",".$lol->id.")'>Cancelar</a>
         </div>

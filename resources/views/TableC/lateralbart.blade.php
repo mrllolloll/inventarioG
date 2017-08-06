@@ -123,6 +123,7 @@ function CasoSelet11($value)
  <br><br>
  </div>
     </div>
+@include('Mensajes.MostrarDetalles')
 @include('Mensajes.MostrarImg')
 @include('formularios.agredual')
 @include('formularios.agrecamptable')

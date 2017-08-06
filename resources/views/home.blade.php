@@ -33,8 +33,6 @@
      }
  });
       });
-
-
       </script>
         <div class="col-xs-10 col-sm-10 col-md-11 col-lg-10" id="tabla-home">
             <div class="panel panel-default panel-central"x>
@@ -44,6 +42,7 @@
                         <button type="button" class="btn btn-blanco btn-xs" data-toggle="modal" data-target="#Alo">
                           PDF
                         </button>
+                        <a href="{{url('GeneradoDePlanillas')}}" class="btn btn-blanco btn-xs">Modelador de planillas</a>
                         <button type="button" class="btn btn-blanco btn-xs" id="btnAgrInf" data-toggle="modal" data-target="#agreinfo">
                           Agregar Informacion.
                         </button>

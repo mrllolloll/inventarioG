@@ -98,6 +98,14 @@ class agrcampos extends Controller
       return  view("/home")->with(['edit'=>true,"camper"=>$yolitoss])->with(['titutable' => $titutable])->with(["table"=>$table]);
     }
 
+
+    public function edit1($id)
+    {
+      $TituloTable=camptable::all();
+      $CamposTable=DB::table('table_centrals')->where('id','=', $id)->get();;
+      return  view("infoview")->with(["CamposTable"=>$CamposTable])->with(['TituloTable' => $TituloTable]);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -112,7 +120,7 @@ class agrcampos extends Controller
       $titutable=camptable::all();
       $camsearch=TableCentral::find($id);
       $i1=0;
-      $tolsl=0;// esta linea no se esta usando, usar para hacerlo un array para borrar imagenes y renplazarlo por uno en 
+      $tolsl=0;// esta linea no se esta usando, usar para hacerlo un array para borrar imagenes y renplazarlo por uno en
       $code="";
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
