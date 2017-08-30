@@ -19,9 +19,6 @@ function CasoSelet11($value)
 
 
 
-<div class="contenedor-lateral">
-<div class="panel-group" id="grupo-lateral">
-  <div class="panel panel-default" id="panel-lateral">
     <div class="panel-heading" id="modalC">
 
       <h4 class="panel-title">
@@ -44,6 +41,22 @@ function CasoSelet11($value)
   .usse{
     background-color: rgb(246, 186, 164);
   }
+  .ui-accordion .ui-accordion-header-active
+{
+background: #b71c1c;
+}
+.ui-accordion .ui-accordion-header:hover
+{
+background: rgb(172, 30, 30);
+font-style: italic;
+}
+
+.ui-accordion .ui-accordion-header
+{
+background: rgb(152, 27, 27);
+color: #FFFFFF;
+font-size: 18px;
+}
 </style>
 <div  class="panel-group" id="" role="tablist">
 
@@ -53,10 +66,10 @@ function CasoSelet11($value)
 </div>
 
  <div class="panel-heading" role="tab" id="menu-lateral">
-      <h5 class="tituloCampos-lateral"><center>Titulos de Campos</center></h5>
+      <h5 class="tituloCampos-lateral"><center>Titulos de Modulos</center></h5>
 
   </div>
-
+  <div id="accordion">
   <?php
   $i1=0;
   foreach ($titutable as $o) {
@@ -65,68 +78,39 @@ function CasoSelet11($value)
     $kk=route('tablerecurses.destroy',["id"=>$o->id,"yolo"=>$mostar]);
 
     echo '
-    <hr id="divisor-lateral">
-
-      <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body panel-lateral" id="accordion">
-        <div class="panel-heading" id="panel">
-          <h4 class="panel-title" >
-            <a data-toggle="collapse" data-parent="#accordion" href="#colas'.$i1.'" id="modalLateral" class="nombre-tablas">
-
-              '.$i[$i1].'
-               <span class="caret pull-right" style="margin-top: 5px"></span>
-            </a>
-          </h4>
-        </div>
-         <div id="colas'.$i1.'" class="panel-collapse collapse">
-          <div class="panel-body">
-            ';
-            if ($o->nombclum=='Dual') {
-              $data1 = DB::table('tab_'.$mostar)->get();
-            echo '
-            <table>
-            ';
-            foreach ($data1 as $h) {
-                echo $h->info;
-                echo "<br>";
-              }
-            echo'
-            <br>
-            <tr>
-                  <div class="btn-group">
-                    <a href="#" type="button" class="btn btn-blanco btn-xs nombre-tablas" data-toggle="modal" id="modalLateral1" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
-                     <a href="#" type="button" class="btn btn-eliminar btn-xs" id="modalLateralE" btn-xs nombre-tablas" data-toggle="modal" data-target="#borr12" onclick="ondelet1(\' '.$kk.' \',\'true\')"> Eliminar </a>
-                  </div>
-            </tr>
-            </table>';
-          }else {
-            echo '
-            <table>
-            <tr>
-              <a href="#" type="button" class="btn btn-eliminar btn-xs" id="modalLateralE" btn-xs nombre-tablas" data-toggle="modal" data-target="#borr12" onclick="ondelet1(\' '.$kk.' \',\'false\')"> Eliminar </a>
-            </tr>
-            </table>';
+        <h3>'.$i[$i1].'</h3>
+        <div>
+        <ul>';
+        if ($o->nombclum=='Dual') {
+          $data1 = DB::table('tab_'.$mostar)->get();
+        foreach ($data1 as $h) {
+          echo "<li>";
+            echo $h->info;
+          echo "</li>";
           }
-            echo '
-          </div>
+        echo'
+
+              <div class="btn-group">
+                <a href="#" type="button" class="btn btn-blanco btn-xs nombre-tablas" data-toggle="modal" id="modalLateral1" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
+                 <a href="#" type="button" class="btn btn-eliminar btn-xs" id="modalLateralE" btn-xs nombre-tablas" data-toggle="modal" data-target="#borr12" onclick="ondelet1(\' '.$kk.' \',\'true\')"> Eliminar </a>
+              </div>
+        ';
+      }else {
+        echo '
+
+            <a href="#" type="button" class="btn btn-eliminar btn-xs" id="modalLateralE" btn-xs nombre-tablas" data-toggle="modal" data-target="#borr12" onclick="ondelet1(\' '.$kk.' \',\'false\')"> Eliminar </a>
+        ';
+      }
+
+        echo'
+        </ul>
         </div>
-      </div>
-  </div>
+
       ';
 
     $i1++;
-    echo '<hr id="divisor-lateral">';
+
   }
   $i1=0;
 ?>
- </div>
- <br><br>
- </div>
-    </div>
-@include('Mensajes.MostrarDetalles')
-@include('Mensajes.MostrarImg')
-@include('formularios.agredual')
-@include('formularios.agrecamptable')
-@include('formularios.agragrdat')
-@include('Mensajes.DeleteMoldal')
-@include('Mensajes.Deletemodallateral')
+  </div>

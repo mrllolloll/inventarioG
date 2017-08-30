@@ -63,7 +63,11 @@ Route::get('GeneradoDePlanillas', function () {
 });
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+Route::get('/Optiones/{id}/{name}/{boole}', 'RestrictionController@show');
+Route::resource('/Destroid','RestrictionController');
 Route::resource('/tablerecurses','tablerecurses');
+Route::resource('/EditTable','agrcampos@EditTableCambio');
+Route::resource('/RestricTable','RestrictionController@InsertC');
 Route::resource('/camp','agrcampos');
 Route::resource('/Rest','agrcampos@edit1');
 Route::resource('/agre','AgrecamDinamic');

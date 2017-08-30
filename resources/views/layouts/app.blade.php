@@ -7,16 +7,16 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ config('app.name', 'Laravel') }}</title>
-  <link rel="stylesheet" type="text/css" href="/css/roboto.css">
+  <link rel="stylesheet" type="text/css" href="{{asset('/css/roboto.css')}}">
   <!-- Bootstrap -->
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{asset('/css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Bootstrap Material Design -->
-  <link href="/css/bootstrap-material-design.css" rel="stylesheet">
-  <link href="/css/ripples.min.css" rel="stylesheet">
+  <link href="{{asset('/css/bootstrap-material-design.css')}}" rel="stylesheet">
+  <link href="{{asset('/css/ripples.min.css')}}" rel="stylesheet">
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/jorstyle.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/jorstyle.css')}}">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -39,7 +39,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/home') }}" id="brand1">
-                        <img alt="" src="{{url('css/seniat.png')}}" class="logo" id="brand2"/>
+                        <img alt="" src="{{asset('css/seniat.png')}}" class="logo" id="brand2"/>
                     </a>
                 </div>
 
@@ -78,13 +78,22 @@
                 </div>
             </div>
         </nav>
+        <br><br>
         <!-- Scripts -->
-        <script src="/js/jquery-3.2.1.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/ripples.min.js"></script>
-        <script src="/js/material.min.js"></script>
-        <script src="/js/jqueryui/jquery-ui.min.js"></script>
+        <script src="{{asset('/js/jquery-3.2.1.min.js')}}"></script>
+        <script src="{{asset('/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('/js/ripples.min.js')}}"></script>
+        <script src="{{asset('/js/material.min.js')}}"></script>
+        <script src="{{asset('/js/jqueryui/jquery-ui.min.js')}}"></script>
         <script>
+        $( function() {
+          $( "#accordion" ).accordion({
+          collapsible: true,
+          heightStyle: "content",
+          header: "h3",
+          active: false
+          });
+        } );
           $(function () {
             $.material.init();
             $(".shor").noUiSlider({
@@ -107,10 +116,33 @@
             });
           });
         </script>
+
         @yield('content')
     </div>
+    @if(!isset($edit))
+      @include('Propiedades.Properties')
+      @include('Mensajes.MostrarDetalles')
+      @include('Mensajes.DeleteMoldalProperties')
+      @include('formularios.EditTable')
+      @include('Mensajes.MostrarImg')
+      @include('formularios.agredual')
+      @include('formularios.agrecamptable')
+      @include('formularios.agragrdat')
+      @include('Mensajes.DeleteMoldal')
+      @include('Mensajes.Deletemodallateral')
+      @include('layouts.datespicker')
+    @endif
 
-    @include('layouts.datespicker')
+    <script src="{{asset('/tablesorter/jquery.tablesorter.js')}}"></script>
+    <script type="text/javascript">
+      $("#my-table").tablesorter( {sortList: [[0,0], [1,0]]});
 
+      $(document).ready(function() {
+      	$(".botonExcel").click(function(event) {
+      		$("#datos_a_enviar").val( $("<div>").append( $("#my-table").eq(0).clone()).html());
+      		$("#FormularioExportacion").submit();
+      });
+      });
+    </script>
 </body>
 </html>

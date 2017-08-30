@@ -12,31 +12,6 @@ function ondelet(value,value1){
   $("#FormDelete").attr('action',value);
   $(".boolT").val(value1);
 }
-$(document).ready(function(){
-  // Write on keyup event of keyword input element
-  $("#kwd_search").keyup(function(){
-    // When value of the input is not blank
-    if( $(this).val() != "")
-    {
-      // Show only matching TR, hide rest of them
-      $("#my-table tbody>tr").hide();
-      $("#my-table td:contains-ci('" + $(this).val() + "')").parent("tr").show();
-    }
-    else
-    {
-      // When there is no input or clean again, show everything back
-      $("#my-table tbody>tr").show();
-    }
-  });
-});
-// jQuery expression for case-insensitive filter
-$.extend($.expr[":"],
-{
-  "contains-ci": function(elem, i, match, array)
-  {
-    return (elem.textContent || elem.innerText || $(elem).text() || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
-  }
-});
 
 function ImagenesView(value){
   $('.imgredirc').attr("src",value);
@@ -71,15 +46,14 @@ $(document).ready(function(){
 });
 
 </script>
+<section class="col-md-12">
+  <label for="kwd_search"  >Buscar: </label> <input type="text"  id="kwd_search" value=""/>
+</section>
+<br><br>
 <section class="table-responsive col-xs-5 col-sm-12 col-md-12">
   <table id="my-table" class="table table-condensed table-striped table-hover">
     @if(isset($titutable))
     <thead>
-      <tr>
-        <th>
-          <label for="kwd_search">Buscar: </label><input type="text" id="kwd_search" value=""/>
-        </th>
-      </tr>
       <tr>
         <!--Cambiar de lugar las opciones para el primerpuesto y agregarles detalles validar el resto con jquery y validate en laravel en su respectivo modelos en especial las imagenes con jquery-->
         @foreach($titutable as $n)
@@ -120,7 +94,11 @@ $(document).ready(function(){
           $mostar=CasoSelet($i[$i1]);
           if ($i0[$i2]!="Date") {
             if ($i3[$i2]!=true) {
-              echo "<td>".$lol->$mostar."</td>";
+              if ($lol->$mostar=="1111-11-11" || $lol->$mostar=="") {
+                echo "<td>n/a</td>";
+              }else {
+                echo "<td>".$lol->$mostar."</td>";
+              }
             }else {
               if ($lol->$mostar!="") {
                 echo '<th>
@@ -129,7 +107,7 @@ $(document).ready(function(){
                         </button>
                       </th>';
               }else {
-                echo "<td>N/A</td>";
+                echo "<td>n/a</td>";
               }
                 if ($visualimg!="") {
                   $visualimg.=",".$lol->$mostar;
@@ -141,7 +119,7 @@ $(document).ready(function(){
            if ($busc = DB::table('tab_'.$mostar)->where('id', $lol->$mostar)->first()) {
                 echo "<td>".$busc->info."</td>";
             }else {
-              echo "<td>N/A</td>";
+              echo "<td>n/a</td>";
             }
           }
           $i2++;
@@ -171,3 +149,33 @@ $(document).ready(function(){
 
   </table>
 </section>
+
+<script type="text/javascript">
+document.querySelector("#kwd_search").onkeyup = function(){
+      $TableFilter("#my-table", this.value);
+  }
+
+  $TableFilter = function(id, value){
+      var rows = document.querySelectorAll(id + ' tbody tr');
+
+      for(var i = 0; i < rows.length; i++){
+          var showRow = false;
+
+          var row = rows[i];
+          row.style.display = 'none';
+
+          for(var x = 0; x < row.childElementCount; x++){
+              if(row.children[x].textContent.toLowerCase().indexOf(value.toLowerCase().trim()) > -1){
+                  showRow = true;
+                  break;
+              }
+          }
+
+          if(showRow){
+              row.style.display = null;
+          }
+      }
+  }
+
+
+</script>

@@ -14,7 +14,27 @@ function control(f){
     var t=f.cloneNode(true);
     t.value='';
     f.parentNode.replaceChild(t,f);
+
 }
+
+$(document).ready(function(){
+  @foreach($tableRes as $T)
+    <?php $Campostbale=DB::table('camptables')->where('id', $T->camptables_id)->first() ?>
+    $('#id{{CasoSelet101($Campostbale->nomtable)}}').click(function(){
+      if($(this).val()=={{$T->objetive_id}}){
+    <?php $Opj=DB::table('camptables')->where('id', $T->afected_camptables_id)->first()?>
+      $('#id{{CasoSelet101($Opj->nomtable)}}').val(@if($T->default_option!="" && $Opj->nombclum =="Dual") {{$T->default_option}} @elseif($T->default_option=="" && $Opj->nombclum =="text") "n/a" @elseif($T->default_option=="" && $Opj->nombclum =="number") 0 @elseif($T->default_option=="" && $Opj->nombclum =="Dual") "n/a" @elseif($T->default_option=="" && $Opj->nombclum =="DATE") "1111-11-11"  @else "" @endif);
+      $('#id{{CasoSelet101($Opj->nomtable)}}').hide(100);
+      $('.Shock{{CasoSelet101($Opj->nomtable)}}').hide(100);
+    }else {
+      $('#id{{CasoSelet101($Opj->nomtable)}}').val("");
+      $('#id{{CasoSelet101($Opj->nomtable)}}').show(100);
+      $('.Shock{{CasoSelet101($Opj->nomtable)}}').show(100);
+    }
+  });
+  @endforeach
+});
+
 </script>
 
 <?php
@@ -49,7 +69,7 @@ function CasoSeletr($value)
       if ($dates!="false") {
           if ($dates=="DATE") {
             echo '
-            <section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">
+            <section class=" Shock'.$fatamano.' form-group"><label for="id'.$fatamano.'" class=" Shock'.$fatamano.' col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">
             <input required type="text" id="id'.$fatamano.'"   name="'.$i1.'" class="form-control">
             </section></section>
             <script type="text/javascript">
@@ -62,9 +82,10 @@ function CasoSeletr($value)
               $dualar="tab_";
               $dualar.=$fatamano;
               $data = DB::table($dualar)->get();
-              echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">';
+              echo '<section class=" Shock'.$fatamano.' form-group"><label for="id'.$fatamano.'" class=" Shock'.$fatamano.' col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8">';
               echo '<select id="id'.$fatamano.'" name="'.$i1.'" class="form-control" required>';
               echo '<option value="">Seleccionar una opcion</option>';
+              echo '<option value="n/a" class="hide">N/A</option>';
               foreach ($data as $datas) {
                 echo '<option value="'.$datas->id.'">'.$datas->info.'</option>';
               }
@@ -72,12 +93,12 @@ function CasoSeletr($value)
               echo '</section>
                     </section>';
           }elseif($dates=="file") {
-            echo '<section class="col-md-12"><label for="id'.$fatamano.'" class="col-md-4 valfile">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" required accept="image/*" onchange="control(this)"></section></section>';
+            echo '<section class=" Shock'.$fatamano.' col-md-12"><label for="id'.$fatamano.'" class=" Shock'.$fatamano.' col-md-4 valfile">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" accept="image/*" onchange="control(this)"></section></section>';
             echo "<br><br>";
           }elseif($dates=="number") {
-            echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control numL" required min="0"  max="99999999999999999999"></section></section>';
+            echo '<section class=" Shock'.$fatamano.' form-group"><label for="id'.$fatamano.'" class=" Shock'.$fatamano.' col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control numL" required min="0"  max="99999999999999999999"></section></section>';
           }else{
-            echo '<section class="form-group"><label for="id'.$fatamano.'" class="col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control textL" maxlength="50" required></section></section>';
+            echo '<section class=" Shock'.$fatamano.' form-group"><label for="id'.$fatamano.'" class=" Shock'.$fatamano.' col-md-4">Ingresar '.$fatamanor.' :</label><section Class="col-md-8"><input id="id'.$fatamano.'" type="'.$dates.'" name="'.$i1.'" class="form-control textL" maxlength="50" required></section></section>';
           }
       }
       $i1++;

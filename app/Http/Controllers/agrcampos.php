@@ -11,6 +11,7 @@ use Storage;
 
 class agrcampos extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -30,6 +31,19 @@ class agrcampos extends Controller
     {
         //
     }
+    public function EditTableCambio(Request $request){
+      $Har=camptable::all();
+
+      foreach ($Har as $TY) {
+        $I=$TY->id;
+        $Hor=camptable::find($request->$I);
+        DB::statement("UPDATE camptables SET nomtable = '".$TY->nomtable."', nombclum = '".$TY->nombclum."' WHERE id =".$request->$I);
+        DB::statement("UPDATE camptables SET nomtable = '".$Hor->nomtable."',nombclum = '".$Hor->nombclum."'  WHERE id =".$TY->id);
+      }
+
+
+
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -38,13 +52,13 @@ class agrcampos extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    private function CasoAelet1($value)
-     {
-       $mofi1=$value;
-       $sustitu = array(0=>"_");
-       $indicador = array(0=>"/ /");
-       return preg_replace($indicador,$sustitu,$mofi1);
-     }
+         private function CasoAelet1($value)
+          {
+            $mofi1=$value;
+            $sustitu = array(0=>"_");
+            $indicador = array(0=>"/ /");
+            return preg_replace($indicador,$sustitu,$mofi1);
+          }
 
     public function store(Request $request)
     {
@@ -55,7 +69,7 @@ class agrcampos extends Controller
       foreach ($titutable as $o) {
         $i[$i1]=$o->nomtable;
         if ($o->nombclum!="false") {
-          if ($o->nombclum=="file") {
+          if ($o->nombclum=="file" && $request->$i1 !="") {
             $img=$request->file($i1);
             $file_route=time().'_'.$img->getClientOriginalName();
             Storage::disk('Imgtable')->put($file_route,file_get_contents($img->getRealPath()));
