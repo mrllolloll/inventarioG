@@ -150,6 +150,7 @@ $(document).ready(function(){
   </table>
 </section>
 
+
 <script type="text/javascript">
 document.querySelector("#kwd_search").onkeyup = function(){
       $TableFilter("#my-table", this.value);
@@ -179,3 +180,14 @@ document.querySelector("#kwd_search").onkeyup = function(){
 
 
 </script>
+@include('Propiedades.Properties')
+@include('Mensajes.MostrarDetalles')
+@include('Mensajes.DeleteMoldalProperties')
+@include('formularios.EditTable')
+@include('Mensajes.MostrarImg')
+@include('formularios.agredual')
+@include('formularios.agrecamptable')
+@include('formularios.agragrdat')
+@include('Mensajes.DeleteMoldal')
+@include('Mensajes.Deletemodallateral')
+@include('layouts.datespicker')

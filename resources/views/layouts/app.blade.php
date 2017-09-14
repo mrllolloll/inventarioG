@@ -85,6 +85,7 @@
         <script src="{{asset('/js/ripples.min.js')}}"></script>
         <script src="{{asset('/js/material.min.js')}}"></script>
         <script src="{{asset('/js/jqueryui/jquery-ui.min.js')}}"></script>
+
         <script>
         $( function() {
           $( "#accordion" ).accordion({
@@ -119,22 +120,11 @@
 
         @yield('content')
     </div>
-    @if(!isset($edit))
-      @include('Propiedades.Properties')
-      @include('Mensajes.MostrarDetalles')
-      @include('Mensajes.DeleteMoldalProperties')
-      @include('formularios.EditTable')
-      @include('Mensajes.MostrarImg')
-      @include('formularios.agredual')
-      @include('formularios.agrecamptable')
-      @include('formularios.agragrdat')
-      @include('Mensajes.DeleteMoldal')
-      @include('Mensajes.Deletemodallateral')
-      @include('layouts.datespicker')
-    @endif
 
     <script src="{{asset('/tablesorter/jquery.tablesorter.js')}}"></script>
+
     <script type="text/javascript">
+
       $("#my-table").tablesorter( {sortList: [[0,0], [1,0]]});
 
       $(document).ready(function() {

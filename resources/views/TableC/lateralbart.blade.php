@@ -16,24 +16,15 @@ function CasoSelet11($value)
     $('#tool').val(value);
   }
 </script>
-
-
-
     <div class="panel-heading" id="modalC">
-
       <h4 class="panel-title">
        <br>
        <center>
          <button type="button" class="btn btn-blanco btn-sm btn-agregarC Roboto"  id="agregarC" data-toggle="modal" data-target="#AgreCamp1">
          Agregar Campos
         </button>
-
         </center>
-
       </h4>
-
-
-
 <style media="screen">
   .holl{
     font-size: 13px;
@@ -59,9 +50,7 @@ font-size: 18px;
 }
 </style>
 <div  class="panel-group" id="" role="tablist">
-
-
-     </div>
+</div>
 
 </div>
 
@@ -89,7 +78,6 @@ font-size: 18px;
           echo "</li>";
           }
         echo'
-
               <div class="btn-group">
                 <a href="#" type="button" class="btn btn-blanco btn-xs nombre-tablas" data-toggle="modal" id="modalLateral1" data-target="#agredual" onclick="infot(\''.'tab_'.$mostar.'\')"> Agregar </a>
                  <a href="#" type="button" class="btn btn-eliminar btn-xs" id="modalLateralE" btn-xs nombre-tablas" data-toggle="modal" data-target="#borr12" onclick="ondelet1(\' '.$kk.' \',\'true\')"> Eliminar </a>
@@ -97,19 +85,14 @@ font-size: 18px;
         ';
       }else {
         echo '
-
             <a href="#" type="button" class="btn btn-eliminar btn-xs" id="modalLateralE" btn-xs nombre-tablas" data-toggle="modal" data-target="#borr12" onclick="ondelet1(\' '.$kk.' \',\'false\')"> Eliminar </a>
         ';
       }
-
         echo'
         </ul>
         </div>
-
       ';
-
     $i1++;
-
   }
   $i1=0;
 ?>
